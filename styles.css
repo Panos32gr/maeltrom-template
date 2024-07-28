@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.maelstrom {
+        border: black;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        border-color: #000;
+        background-position: center;
+        background-size: fill;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        position: absolute;
+}
+
+
+.main-banner {
+  margin: 0 auto;
+  width: 1200px;
+  height: 400px;
+  background-color: #000;
+  overflow: hidden;
+  top: 200px;
+  position: relative;
+}
+
+
+.main-banner .imgban {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  transition: all ease-in-out 500ms;
+  -webkit-transition: transition all ease-in-out 500ms;
+  -moz-transition: transition all ease-in-out 500ms;
+  -o-transition: transition all ease-in-out 500ms;
+}
+
+.main-banner #imgban3 {
+  background-image: url("images/bnr1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
+}
+
+.main-banner #imgban2 {
+  background-image: url("images/bnr2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+
+}
+
+
+.main-banner #imgban1 {
+  background-image: url("images/bn3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+
+}
+
+
+.placeholder1 {
+    width: 1920px;
+    height: 500px;
+    position: absolute;
+    background-color: #000;
+    top: 151%;
+    left: 0;
+}
+
+.triangle-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+.triangle-button1 {
+    position: absolute;
+    top: 154%;
+    left: 32%;
+    width: 380px; 
+    height: 470px; 
+    background: #ff0000; 
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%); 
+    overflow: hidden; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 0; 
+    outline: none; 
+}
+
+
+.triangle-button1 .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+
+  }
+  
+  .triangle-button1:focus {
+    outline: none;
+  }
+  
+  .triangle-button1:hover {
+    border-bottom-color: #0056b3;
+  }
+
+
+
+  .triangle-button2 {
+    position: absolute;
+    top: 154%;
+    left: 44.5%;
+    width: 380px; 
+    height: 470px; 
+    background: #ff0000; 
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%); 
+    overflow: hidden; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 0; 
+    outline: none; 
+}
+
+
+.triangle-button2 .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+
+  }
+  
+  .triangle-button2:focus {
+    outline: none;
+  }
+  
+  .triangle-button2:hover {
+    border-bottom-color: #0056b3;
+  }
+
+
+
+
+  .triangle-button3 {
+    position: absolute;
+    top: 151%;
+    left: 35.5%;
+    width: 500px; 
+    height: 470px; 
+    background: #ff0000; 
+    clip-path: polygon(50% 60%, 0% 0%, 100% 0%); 
+    overflow: hidden; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 0; 
+    outline: none; 
+}
+
+
+.triangle-button3 .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+
+  }
+  
+  .triangle-button3:focus {
+    outline: none;
+  }
+  
+  .triangle-button3:hover {
+    border-bottom-color: #0056b3;
+  }
+
+.rectangle-button1 {
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 16%;
+    top: 151%;
+    height: 500px;
+    width: 250px;
+    background-color: #ff0000;
+
+}
+
+.rectangle-button1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .triangle-button:focus {
+    outline: none;
+  }
+  
+  .triangle-button:hover {
+    border-bottom-color: #0056b3;
+  }
+
+
+.rectangle-button2 {
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position: absolute;
+    z-index: 1000;
+    left: 67%;
+    top: 151%;
+    height: 500px;
+    width: 250px;
+    background-color: #ff0000;
+
+}
+
+.rectangle-button2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .triangle-button:focus {
+    outline: none;
+  }
+  
+  .triangle-button:hover {
+    border-bottom-color: #0056b3;
+  }
+
+
