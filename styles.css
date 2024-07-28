@@ -7,21 +7,6 @@
 
 
 
-.maelstrom {
-        border: black;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        border-color: #000;
-        background-position: center;
-        background-size: fill;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        position: absolute;
-}
-
-
 .main-banner {
   margin: 0 auto;
   width: 1200px;
@@ -70,29 +55,303 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
-
-
 }
+
+
+
+.navcards {
+  background: linear-gradient(320deg, black, silver);
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  top: 400px;
+  left: 400px;
+}
+
+
+.navcards .card1 {
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  top: 100px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navcards .card1::before {
+  content: '';
+  position: absolute;
+  top: 300;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+
+.navcards .card1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+  filter: blur(30px);
+}
+
+.navcards .card1 b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.navcards .card1 img {
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+}
+
+.navcards .card1:hover img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+}
+
+.navcards .card1 .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.navcards .card1:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: 0.70em;
+}
+
+
+/*middle card*/
+.navcards .card2 {
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  top: 100px;
+  left: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navcards .card2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+
+.navcards .card2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+  filter: blur(30px);
+}
+
+.navcards .card2 b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.navcards .card2 img {
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+}
+
+.navcards .card2:hover img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+}
+
+.navcards .card2 .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.navcards .card2:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: 0.70em;
+}
+
+
+
+/*card on the right of viewport*/
+.navcards .card3 {
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  top: 100px;
+  left: 810px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navcards .card3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+
+.navcards .card3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+  filter: blur(30px);
+}
+
+.navcards .card3 b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.navcards .card3 img {
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+}
+
+.navcards .card3:hover img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+}
+
+.navcards .card3 .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.navcards .card3:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: 0.70em;
+}
+
+
 
 
 .placeholder1 {
-    width: 1920px;
+    width: 1900px;
     height: 500px;
-    position: absolute;
+    position: relative;
     background-color: #000;
-    top: 151%;
+    top: 1300px;
     left: 0;
 }
 
-.triangle-link {
+.placeholder1 .triangle-link {
     display: inline-block;
     text-decoration: none;
   }
 
-.triangle-button1 {
+.placeholder1 .triangle-button1 {
     position: absolute;
-    top: 154%;
+    bottom: 0;
     left: 32%;
     width: 380px; 
     height: 470px; 
@@ -103,11 +362,12 @@
     cursor: pointer; 
     padding: 0; 
     margin: 0; 
+    z-index: 1;
     outline: none; 
 }
 
 
-.triangle-button1 .img {
+.placeholder1 .triangle-button1 .img {
     position: absolute;
     top: 0;
     left: 0;
@@ -117,19 +377,19 @@
 
   }
   
-  .triangle-button1:focus {
+  .placeholder1 .triangle-button1:focus {
     outline: none;
   }
   
-  .triangle-button1:hover {
+  .placeholder1 .triangle-button1:hover {
     border-bottom-color: #0056b3;
   }
 
 
 
-  .triangle-button2 {
+  .placeholder1 .triangle-button2 {
     position: absolute;
-    top: 154%;
+    bottom: 0;
     left: 44.5%;
     width: 380px; 
     height: 470px; 
@@ -139,12 +399,13 @@
     border: none; 
     cursor: pointer; 
     padding: 0; 
-    margin: 0; 
+    margin: 0;
+    z-index: 1;
     outline: none; 
 }
 
 
-.triangle-button2 .img {
+.placeholder1 .triangle-button2 .img {
     position: absolute;
     top: 0;
     left: 0;
@@ -154,20 +415,20 @@
 
   }
   
-  .triangle-button2:focus {
+  .placeholder1 .triangle-button2:focus {
     outline: none;
   }
   
-  .triangle-button2:hover {
+  .placeholder1 .triangle-button2:hover {
     border-bottom-color: #0056b3;
   }
 
 
 
 
-  .triangle-button3 {
+  .placeholder1 .triangle-button3 {
     position: absolute;
-    top: 151%;
+    top: 0;
     left: 35.5%;
     width: 500px; 
     height: 470px; 
@@ -182,7 +443,7 @@
 }
 
 
-.triangle-button3 .img {
+.placeholder1 .triangle-button3 .img {
     position: absolute;
     top: 0;
     left: 0;
@@ -192,29 +453,29 @@
 
   }
   
-  .triangle-button3:focus {
+  .placeholder1 .triangle-button3:focus {
     outline: none;
   }
   
-  .triangle-button3:hover {
+  .placeholder1 .triangle-button3:hover {
     border-bottom-color: #0056b3;
   }
 
-.rectangle-button1 {
+.placeholder1 .rectangle-button1 {
     background: transparent;
     cursor: pointer;
     outline: none;
     border: none;
     position: absolute;
     left: 16%;
-    top: 151%;
+    top: 0;
     height: 500px;
     width: 250px;
     background-color: #ff0000;
 
 }
 
-.rectangle-button1 img {
+.placeholder1 .rectangle-button1 img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -223,16 +484,16 @@
     height: 100%;
   }
   
-  .triangle-button:focus {
+  .placeholder1 .triangle-button:focus {
     outline: none;
   }
   
-  .triangle-button:hover {
+  .placeholder1 .triangle-button:hover {
     border-bottom-color: #0056b3;
   }
 
 
-.rectangle-button2 {
+.placeholder1 .rectangle-button2 {
     background: transparent;
     cursor: pointer;
     outline: none;
@@ -240,14 +501,14 @@
     position: absolute;
     z-index: 1000;
     left: 67%;
-    top: 151%;
+    top: 0;
     height: 500px;
     width: 250px;
     background-color: #ff0000;
 
 }
 
-.rectangle-button2 img {
+.placeholder1 .rectangle-button2 img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -256,11 +517,11 @@
     height: 100%;
   }
   
-  .triangle-button:focus {
+  .placeholder1 .triangle-button:focus {
     outline: none;
   }
   
-  .triangle-button:hover {
+  .placeholder1 .triangle-button:hover {
     border-bottom-color: #0056b3;
   }
 
