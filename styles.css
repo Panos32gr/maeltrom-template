@@ -1,528 +1,677 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bck {
+  position: absolute;
+  top: 0;
+  left:0;
+  background-color: #000;
+  width:100%;
+  height:250%;
 }
 
 
 
+.logo {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo img {
+  position: absolute;
+  top: 0;
+  size: 60%;
+}
+
+.logo p {
+  position: relative;
+  top: 40px;
+  left: 100px;
+  font-size: 18px;
+  color: #fff;
+}
+
+
+
+.navbar {
+  top: 50px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  top: 100px;
+  background: linear-gradient(90deg, blue 5%, purple);
+  background-size: cover;
+  color: white;
+
+}
+
+.nav-list {
+  top: 10px;
+  position: absolute;
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-right: 200px;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: #ffd700;
+  /* Change the color on hover */
+}
 
 
 .main-banner {
-  margin: 0 auto;
-  width: 1200px;
-  height: 400px;
-  background-color: #000;
-  overflow: hidden;
-  top: 200px;
-  position: relative;
+margin: 0 auto;
+width: 1200px;
+height: 400px;
+background-color: #000;
+overflow: hidden;
+top: 200px;
+position: relative;
 }
 
 
 .main-banner .imgban {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  transition: all ease-in-out 500ms;
-  -webkit-transition: transition all ease-in-out 500ms;
-  -moz-transition: transition all ease-in-out 500ms;
-  -o-transition: transition all ease-in-out 500ms;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+transition: all ease-in-out 500ms;
+-webkit-transition: transition all ease-in-out 500ms;
+-moz-transition: transition all ease-in-out 500ms;
+-o-transition: transition all ease-in-out 500ms;
 }
 
 .main-banner #imgban3 {
-  background-image: url("images/bnr1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+background-image: url("images/bnr1.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
 
 
 }
 
 .main-banner #imgban2 {
-  background-image: url("images/bnr2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
+background-image: url("images/bnr2.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
 
 
 }
 
 
 .main-banner #imgban1 {
-  background-image: url("images/bn3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+background-image: url("images/bn3.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 
 
 .navcards {
-  background: linear-gradient(320deg, black, silver);
-  position: relative;
-  width: 1000px;
-  height: 500px;
-  top: 400px;
-  left: 400px;
+background: transparent;
+position: relative;
+width: 1000px;
+height: 500px;
+top: 400px;
+left: 400px;
 }
 
 
 .navcards .card1 {
-  position: absolute;
-  width: 190px;
-  height: 254px;
-  background: rgb(0, 0, 0);
-  display: flex;
-  top: 100px;
-  left: 0px;
-  justify-content: center;
-  align-items: center;
+position: absolute;
+width: 190px;
+height: 254px;
+background: rgb(0, 0, 0);
+display: flex;
+top: 100px;
+left: 0px;
+justify-content: center;
+align-items: center;
 }
 
 .navcards .card1::before {
-  content: '';
-  position: absolute;
-  top: 300;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
+content: '';
+position: absolute;
+top: 300;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
 }
 
 .navcards .card1::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  filter: blur(30px);
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
+filter: blur(30px);
 }
 
 .navcards .card1 b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+position: absolute;
+inset: 6px;
+background: rgba(0, 0, 0, 0.6);
+z-index: 2;
 }
 
 .navcards .card1 img {
-  position: absolute;
-  z-index: 3;
-  scale: 0.8;
-  opacity: 0.25;
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+scale: 0.8;
+opacity: 0.25;
+transition: 0.5s;
 }
 
 .navcards .card1:hover img {
-  scale: 0.5;
-  opacity: 0.9;
-  transform: translateY(-70px);
+scale: 0.5;
+opacity: 0.9;
+transform: translateY(-70px);
 }
 
 .navcards .card1 .content {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: scale(0);
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+bottom: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+transform: scale(0);
+transition: 0.5s;
 }
 
 .navcards .card1:hover .content {
-  transform: scale(1);
-  bottom: 25px;
+transform: scale(1);
+bottom: 25px;
 }
 
 .content .title {
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1em;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
+position: relative;
+color: #fff;
+font-weight: 500;
+line-height: 1em;
+font-size: 1em;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+text-align: center;
 }
 
 .content .title span {
-  font-weight: 300;
-  font-size: 0.70em;
+font-weight: 300;
+font-size: 0.70em;
 }
 
 
 /*middle card*/
 .navcards .card2 {
-  position: absolute;
-  width: 190px;
-  height: 254px;
-  background: rgb(0, 0, 0);
-  display: flex;
-  top: 100px;
-  left: 400px;
-  justify-content: center;
-  align-items: center;
+position: absolute;
+width: 190px;
+height: 254px;
+background: rgb(0, 0, 0);
+display: flex;
+top: 100px;
+left: 400px;
+justify-content: center;
+align-items: center;
 }
 
 .navcards .card2::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
 }
 
 .navcards .card2::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  filter: blur(30px);
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
+filter: blur(30px);
 }
 
 .navcards .card2 b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+position: absolute;
+inset: 6px;
+background: rgba(0, 0, 0, 0.6);
+z-index: 2;
 }
 
 .navcards .card2 img {
-  position: absolute;
-  z-index: 3;
-  scale: 0.8;
-  opacity: 0.25;
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+scale: 0.8;
+opacity: 0.25;
+transition: 0.5s;
 }
 
 .navcards .card2:hover img {
-  scale: 0.5;
-  opacity: 0.9;
-  transform: translateY(-70px);
+scale: 0.5;
+opacity: 0.9;
+transform: translateY(-70px);
 }
 
 .navcards .card2 .content {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: scale(0);
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+bottom: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+transform: scale(0);
+transition: 0.5s;
 }
 
 .navcards .card2:hover .content {
-  transform: scale(1);
-  bottom: 25px;
+transform: scale(1);
+bottom: 25px;
 }
 
 .content .title {
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1em;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
+position: relative;
+color: #fff;
+font-weight: 500;
+line-height: 1em;
+font-size: 1em;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+text-align: center;
 }
 
 .content .title span {
-  font-weight: 300;
-  font-size: 0.70em;
+font-weight: 300;
+font-size: 0.70em;
 }
 
 
 
 /*card on the right of viewport*/
 .navcards .card3 {
-  position: absolute;
-  width: 190px;
-  height: 254px;
-  background: rgb(0, 0, 0);
-  display: flex;
-  top: 100px;
-  left: 810px;
-  justify-content: center;
-  align-items: center;
+position: absolute;
+width: 190px;
+height: 254px;
+background: rgb(0, 0, 0);
+display: flex;
+top: 100px;
+left: 810px;
+justify-content: center;
+align-items: center;
 }
 
 .navcards .card3::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
 }
 
 .navcards .card3::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  filter: blur(30px);
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(315deg,#03a9f4,#ff0058);
+filter: blur(30px);
 }
 
 .navcards .card3 b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+position: absolute;
+inset: 6px;
+background: rgba(0, 0, 0, 0.6);
+z-index: 2;
 }
 
 .navcards .card3 img {
-  position: absolute;
-  z-index: 3;
-  scale: 0.8;
-  opacity: 0.25;
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+scale: 0.8;
+opacity: 0.25;
+transition: 0.5s;
 }
 
 .navcards .card3:hover img {
-  scale: 0.5;
-  opacity: 0.9;
-  transform: translateY(-70px);
+scale: 0.5;
+opacity: 0.9;
+transform: translateY(-70px);
 }
 
 .navcards .card3 .content {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: scale(0);
-  transition: 0.5s;
+position: absolute;
+z-index: 3;
+bottom: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+transform: scale(0);
+transition: 0.5s;
 }
 
 .navcards .card3:hover .content {
-  transform: scale(1);
-  bottom: 25px;
+transform: scale(1);
+bottom: 25px;
 }
 
 .content .title {
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1em;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
+position: relative;
+color: #fff;
+font-weight: 500;
+line-height: 1em;
+font-size: 1em;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+text-align: center;
 }
 
 .content .title span {
-  font-weight: 300;
-  font-size: 0.70em;
+font-weight: 300;
+font-size: 0.70em;
 }
 
 
 
 
 .placeholder1 {
-    width: 1900px;
-    height: 500px;
-    position: relative;
-    background-color: #000;
-    top: 1300px;
-    left: 0;
+  width: 1900px;
+  height: 500px;
+  position: relative;
+  background-color: #000;
+  top: 1300px;
+  left: 0;
 }
 
 .placeholder1 .triangle-link {
-    display: inline-block;
-    text-decoration: none;
-  }
+  display: inline-block;
+  text-decoration: none;
+}
 
 .placeholder1 .triangle-button1 {
-    position: absolute;
-    bottom: 0;
-    left: 32%;
-    width: 380px; 
-    height: 470px; 
-    background: #ff0000; 
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%); 
-    overflow: hidden; 
-    border: none; 
-    cursor: pointer; 
-    padding: 0; 
-    margin: 0; 
-    z-index: 1;
-    outline: none; 
+  position: absolute;
+  bottom: 0;
+  left: 32%;
+  width: 380px; 
+  height: 470px; 
+  background: #ff0000; 
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%); 
+  overflow: hidden; 
+  border: none; 
+  cursor: pointer; 
+  padding: 0; 
+  margin: 0; 
+  z-index: 1;
+  outline: none; 
 }
 
 
 .placeholder1 .triangle-button1 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 
-  }
-  
-  .placeholder1 .triangle-button1:focus {
-    outline: none;
-  }
-  
-  .placeholder1 .triangle-button1:hover {
-    border-bottom-color: #0056b3;
-  }
+}
+
+.placeholder1 .triangle-button1:focus {
+  outline: none;
+}
+
+.placeholder1 .triangle-button1:hover {
+  border-bottom-color: #0056b3;
+}
 
 
 
-  .placeholder1 .triangle-button2 {
-    position: absolute;
-    bottom: 0;
-    left: 44.5%;
-    width: 380px; 
-    height: 470px; 
-    background: #ff0000; 
-    clip-path: polygon(100% 0%, 0% 100%, 100% 100%); 
-    overflow: hidden; 
-    border: none; 
-    cursor: pointer; 
-    padding: 0; 
-    margin: 0;
-    z-index: 1;
-    outline: none; 
+.placeholder1 .triangle-button2 {
+  position: absolute;
+  bottom: 0;
+  left: 44.5%;
+  width: 380px; 
+  height: 470px; 
+  background: #ff0000; 
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%); 
+  overflow: hidden; 
+  border: none; 
+  cursor: pointer; 
+  padding: 0; 
+  margin: 0;
+  z-index: 1;
+  outline: none; 
 }
 
 
 .placeholder1 .triangle-button2 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 
-  }
-  
-  .placeholder1 .triangle-button2:focus {
-    outline: none;
-  }
-  
-  .placeholder1 .triangle-button2:hover {
-    border-bottom-color: #0056b3;
-  }
+}
 
+.placeholder1 .triangle-button2:focus {
+  outline: none;
+}
 
+.placeholder1 .triangle-button2:hover {
+  border-bottom-color: #0056b3;
+}
 
 
-  .placeholder1 .triangle-button3 {
-    position: absolute;
-    top: 0;
-    left: 35.5%;
-    width: 500px; 
-    height: 470px; 
-    background: #ff0000; 
-    clip-path: polygon(50% 60%, 0% 0%, 100% 0%); 
-    overflow: hidden; 
-    border: none; 
-    cursor: pointer; 
-    padding: 0; 
-    margin: 0; 
-    outline: none; 
+
+
+.placeholder1 .triangle-button3 {
+  position: absolute;
+  top: 0;
+  left: 35.5%;
+  width: 500px; 
+  height: 470px; 
+  background: #ff0000; 
+  clip-path: polygon(50% 60%, 0% 0%, 100% 0%); 
+  overflow: hidden; 
+  border: none; 
+  cursor: pointer; 
+  padding: 0; 
+  margin: 0; 
+  outline: none; 
 }
 
 
 .placeholder1 .triangle-button3 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 
-  }
-  
-  .placeholder1 .triangle-button3:focus {
-    outline: none;
-  }
-  
-  .placeholder1 .triangle-button3:hover {
-    border-bottom-color: #0056b3;
-  }
+}
+
+.placeholder1 .triangle-button3:focus {
+  outline: none;
+}
+
+.placeholder1 .triangle-button3:hover {
+  border-bottom-color: #0056b3;
+}
 
 .placeholder1 .rectangle-button1 {
-    background: transparent;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    position: absolute;
-    left: 16%;
-    top: 0;
-    height: 500px;
-    width: 250px;
-    background-color: #ff0000;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 16%;
+  top: 0;
+  height: 500px;
+  width: 250px;
+  background-color: #ff0000;
 
 }
 
 .placeholder1 .rectangle-button1 img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-  }
-  
-  .placeholder1 .triangle-button:focus {
-    outline: none;
-  }
-  
-  .placeholder1 .triangle-button:hover {
-    border-bottom-color: #0056b3;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder1 .triangle-button:focus {
+  outline: none;
+}
+
+.placeholder1 .triangle-button:hover {
+  border-bottom-color: #0056b3;
+}
 
 
 .placeholder1 .rectangle-button2 {
-    background: transparent;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    position: absolute;
-    z-index: 1000;
-    left: 67%;
-    top: 0;
-    height: 500px;
-    width: 250px;
-    background-color: #ff0000;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  z-index: 1000;
+  left: 67%;
+  top: 0;
+  height: 500px;
+  width: 250px;
+  background-color: #ff0000;
 
 }
 
 .placeholder1 .rectangle-button2 img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-  }
-  
-  .placeholder1 .triangle-button:focus {
-    outline: none;
-  }
-  
-  .placeholder1 .triangle-button:hover {
-    border-bottom-color: #0056b3;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
 
+.placeholder1 .triangle-button:focus {
+  outline: none;
+}
+
+.placeholder1 .triangle-button:hover {
+  border-bottom-color: #0056b3;
+}
+
+.semicircle1,
+.semicircle1 div {
+  top: 2300px;
+  right: 80px;
+  /*  Adjust the size of the entire animation here.
+      (Remove max size below to go above 300px.) */
+  width: 250px;
+  height: 250px;
+  /* Adjust the speed or timing function of the animation here. */
+  animation: 6s rotate141 infinite linear;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.semicircle1 div {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+.semicircle1:before,
+.semicircle1 div:before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: radial-gradient(transparent, transparent 65%, #ffffff 65%, #ffffff);
+  background-size: 100% 200%;
+}
+
+@keyframes rotate141 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.semicircle2,
+.semicircle2 div {
+  left: 20px;
+  top: 2300px;
+  width: 250px;
+  height: 250px;
+  animation: 6s rotate141 infinite linear;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.semicircle2 div {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+.semicircle2:before,
+.semicircle2 div:before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: radial-gradient(transparent, transparent 65%, #ffffff 65%, #ffffff);
+  background-size: 100% 200%;
+}
+
+@keyframes rotate141 {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
