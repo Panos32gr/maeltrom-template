@@ -81,10 +81,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-.nav-list li a:hover {
-  color: #ffd700;
-  /* Change the color on hover */
-}
+
 
 
 
@@ -156,7 +153,7 @@ width: 190px;
 height: 254px;
 background: rgb(0, 0, 0);
 display: flex;
-top: 100px;
+top: 95px;
 left: 0px;
 justify-content: center;
 align-items: center;
@@ -244,8 +241,8 @@ width: 190px;
 height: 254px;
 background: rgb(0, 0, 0);
 display: flex;
-top: 100px;
-left: 400px;
+top: 95px;
+left: 420px;
 justify-content: center;
 align-items: center;
 }
@@ -333,8 +330,8 @@ width: 190px;
 height: 254px;
 background: rgb(0, 0, 0);
 display: flex;
-top: 100px;
-left: 810px;
+top: 95px;
+left: 830px;
 justify-content: center;
 align-items: center;
 }
@@ -704,82 +701,5 @@ font-size: 0.70em;
 
 .placeholder1 .triangle-button:hover {
   border-bottom-color: #0056b3;
-}
-
-.semicircle1,
-.semicircle1 div {
-  top: 2300px;
-  right: 80px;
-  /*  Adjust the size of the entire animation here.
-      (Remove max size below to go above 300px.) */
-  width: 250px;
-  height: 250px;
-  /* Adjust the speed or timing function of the animation here. */
-  animation: 6s rotate141 infinite linear;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  position: absolute;
-  overflow: hidden;
-}
-
-.semicircle1 div {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-}
-
-.semicircle1:before,
-.semicircle1 div:before {
-  content: '';
-  width: 100%;
-  height: 50%;
-  display: block;
-  background: radial-gradient(transparent, transparent 65%, #ffffff 65%, #ffffff);
-  background-size: 100% 200%;
-}
-
-@keyframes rotate141 {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.semicircle2,
-.semicircle2 div {
-  left: 20px;
-  top: 2300px;
-  width: 250px;
-  height: 250px;
-  animation: 6s rotate141 infinite linear;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  position: absolute;
-  overflow: hidden;
-}
-
-.semicircle2 div {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-}
-
-.semicircle2:before,
-.semicircle2 div:before {
-  content: '';
-  width: 100%;
-  height: 50%;
-  display: block;
-  background: radial-gradient(transparent, transparent 65%, #ffffff 65%, #ffffff);
-  background-size: 100% 200%;
-}
-
-@keyframes rotate141 {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
