@@ -9,9 +9,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #757575;
+  background: linear-gradient(grey, black);
   width: 100%;
-  height: 400%;
+  height: 420%;
 }
 
 .logo {
@@ -81,7 +81,7 @@ body {
 }
 
 .videocontainer1 {
-  background-color: #757575;
+  background: transparent;
   position: relative;
   width: 100%;
   height: 800px;
@@ -122,8 +122,82 @@ body {
   line-height: 50px;
 }
 
+
+
+.guidebutton {
+  top: 30%;
+  right: 0%;
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.guidebutton:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.guidebutton:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.guidebutton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.guidebutton:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.guidebutton:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+
 .videocontainer2 {
-  background-color: #757575;
+  background: transparent;
   position: relative;
   width: 100%;
   height: 500px;
@@ -162,4 +236,158 @@ body {
   left: 0%;
   font-size: 44px;
   line-height: 50px;
+}
+
+
+
+/* footer css*/
+
+.footer {
+  position: relative;
+  top: 1500px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: transparent;
+}
+
+ 
+.wrapper {
+  position: absolute;
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper .icon {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+
+
+.footerlinks {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+}
+
+.footerlinks2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+}
+
+
+.footerlinks3 {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+}
+
+.footerlinks a {
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerlinks2 a {
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+.footerlinks3 a {
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
 }
