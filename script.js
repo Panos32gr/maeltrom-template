@@ -1,3 +1,4 @@
+//banner implementation
 
 var bannerStatus = 1;
 var bannerTimer = 4000;
@@ -65,12 +66,29 @@ function bannerLoop() {
   }
 }
 
-
+//element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
+gsap.from(".vfxinfo", {
+  scrollTrigger: {
+    trigger: ".vfxinfo",
+    start: "top center",
+    markers: true,
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  right: "-100%",
+  ease: "power1.in",
+});
 
-
-gsap.from(".vfxinfo", {scrollTrigger: {trigger:".vfxinfo", start: "center center", markers:true,toggleActions: "play none none none"}, duration: 1, right: "-100%", ease: "power1.in"});
-
-
-gsap.from(".gamesinfo", {scrollTrigger: {trigger:".gamesinfo", start: "center center", markers:true,toggleActions: "play none none none"}, duration: 2, left: "-100%", ease: "power1"});
+gsap.from(".gamesinfo", {
+  scrollTrigger: {
+    trigger: ".gamesinfo",
+    start: "top center",
+    markers: true,
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  left: "-100%",
+  ease: "power1",
+});
