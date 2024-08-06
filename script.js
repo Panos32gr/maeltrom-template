@@ -1,3 +1,7 @@
+
+
+
+
 var bannerStatus = 1;
 var bannerTimer = 4000;
 
@@ -77,3 +81,9 @@ function bannerLoop() {
     }
 
 };
+
+
+
+gsap.from(".vfxinfo", {duration: 2, right: "-100%", ease: "power1"})
+
+gsap.from(".gamesinfo", {duration: 2, left: "-100%", ease: "power1"})     

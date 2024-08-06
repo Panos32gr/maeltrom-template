@@ -1,23 +1,23 @@
-* {
+body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .bck {
   position: absolute;
   top: 0;
-  left:0;
-  background-color: #000;
-  width:100%;
-  height:200%;
+  left: 0;
+  background-color: #757575;
+  width: 100%;
+  height: 400%;
 }
 
-
-
 .logo {
+  width: 100px;
   height: 100px;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
@@ -29,677 +29,137 @@
 }
 
 .logo p {
-  position: relative;
-  top: 40px;
+  position: absolute;
+  top: 0px;
   left: 100px;
   font-size: 18px;
   color: #fff;
 }
 
-
-
-.navbar {
-  top: 50px;
-  width: 100%;
-  height: 50px;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  top: 100px;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  color: white;
-
-}
-
-.nav-list {
-  top: 10px;
-  position: absolute;
-  display: flex;
-  list-style: none;
-}
-
-.nav-list li {
-  margin-right: 200px;
-}
-
-.nav-list li:last-child {
-  margin-right: 0;
-}
-
-.nav-list .drop {
-  width: 200px;
-  height: 25px;
-  color: #fcfcfc;
-  background-color: black;
-  border: none;
-}
-
-.nav-list li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: color 0.3s ease-in-out;
-}
-
-
-
-
-
 .main-banner {
-margin: 0 auto;
-width: 1200px;
-height: 400px;
-background-color: #000;
-overflow: hidden;
-top: 200px;
-position: relative;
+  margin: 0 auto;
+  position: relative;
+  width: 1200px;
+  height: 400px;
+  background-color: #000;
+  overflow: hidden;
+  top: 200px;
+  left: 0;
+  position: relative;
 }
-
 
 .main-banner .imgban {
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0px;
-transition: all ease-in-out 500ms;
--webkit-transition: transition all ease-in-out 500ms;
--moz-transition: transition all ease-in-out 500ms;
--o-transition: transition all ease-in-out 500ms;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  transition: all ease-in-out 500ms;
+  -webkit-transition: transition all ease-in-out 500ms;
+  -moz-transition: transition all ease-in-out 500ms;
+  -o-transition: transition all ease-in-out 500ms;
 }
 
 .main-banner #imgban3 {
-background-image: url("images/bnr1.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-
-
-
+  background-image: url("images/bnr1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main-banner #imgban2 {
-background-image: url("images/bnr2.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-
-
-
+  background-image: url("images/bnr2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 
 .main-banner #imgban1 {
-background-image: url("images/bn3.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  background-image: url("images/bn3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-
-
-.navcards {
-background: transparent;
-position: relative;
-width: 700px;
-height: 500px;
-top: 400px;
-left: 400px;
-}
-
-/* left card */
-.navcards .card1 {
-position: absolute;
-width: 190px;
-height: 254px;
-background: rgb(0, 0, 0);
-display: flex;
-top: 95px;
-left: 0px;
-justify-content: center;
-align-items: center;
-}
-
-.navcards .card1::before {
-content: '';
-position: absolute;
-top: 300;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-}
-
-.navcards .card1::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-filter: blur(30px);
-}
-
-.navcards .card1 b {
-position: absolute;
-inset: 6px;
-background: rgba(0, 0, 0, 0.6);
-z-index: 2;
-}
-
-.navcards .card1 img {
-position: absolute;
-z-index: 3;
-scale: 0.8;
-opacity: 0.25;
-transition: 0.5s;
-}
-
-.navcards .card1:hover img {
-scale: 0.5;
-opacity: 0.9;
-transform: translateY(-70px);
-}
-
-.navcards .card1 .content {
-position: absolute;
-z-index: 3;
-bottom: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-transform: scale(0);
-transition: 0.5s;
-}
-
-.navcards .card1:hover .content {
-transform: scale(1);
-bottom: 25px;
-}
-
-.content .title {
-position: relative;
-color: #fff;
-font-weight: 500;
-line-height: 1em;
-font-size: 1em;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-text-align: center;
-}
-
-.content .title span {
-font-weight: 300;
-font-size: 0.70em;
-}
-
-
-/*middle card*/
-.navcards .card2 {
-position: absolute;
-width: 190px;
-height: 254px;
-background: rgb(0, 0, 0);
-display: flex;
-top: 95px;
-left: 420px;
-justify-content: center;
-align-items: center;
-}
-
-.navcards .card2::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-}
-
-.navcards .card2::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-filter: blur(30px);
-}
-
-.navcards .card2 b {
-position: absolute;
-inset: 6px;
-background: rgba(0, 0, 0, 0.6);
-z-index: 2;
-}
-
-.navcards .card2 img {
-position: absolute;
-z-index: 3;
-scale: 0.8;
-opacity: 0.25;
-transition: 0.5s;
-}
-
-.navcards .card2:hover img {
-scale: 0.5;
-opacity: 0.9;
-transform: translateY(-70px);
-}
-
-.navcards .card2 .content {
-position: absolute;
-z-index: 3;
-bottom: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-transform: scale(0);
-transition: 0.5s;
-}
-
-.navcards .card2:hover .content {
-transform: scale(1);
-bottom: 25px;
-}
-
-.content .title {
-position: relative;
-color: #fff;
-font-weight: 500;
-line-height: 1em;
-font-size: 1em;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-text-align: center;
-}
-
-.content .title span {
-font-weight: 300;
-font-size: 0.70em;
-}
-
-
-
-/*card on the right of viewport*/
-.navcards .card3 {
-position: absolute;
-width: 190px;
-height: 254px;
-background: rgb(0, 0, 0);
-display: flex;
-top: 95px;
-left: 830px;
-justify-content: center;
-align-items: center;
-}
-
-.navcards .card3::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-}
-
-.navcards .card3::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(315deg,#03a9f4,#ff0058);
-filter: blur(30px);
-}
-
-.navcards .card3 b {
-position: absolute;
-inset: 6px;
-background: rgba(0, 0, 0, 0.6);
-z-index: 2;
-}
-
-.navcards .card3 img {
-position: absolute;
-z-index: 3;
-scale: 0.8;
-opacity: 0.25;
-transition: 0.5s;
-}
-
-.navcards .card3:hover img {
-scale: 0.5;
-opacity: 0.9;
-transform: translateY(-70px);
-}
-
-.navcards .card3 .content {
-position: absolute;
-z-index: 3;
-bottom: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-transform: scale(0);
-transition: 0.5s;
-}
-
-.navcards .card3:hover .content {
-transform: scale(1);
-bottom: 25px;
-}
-
-.content .title {
-position: relative;
-color: #fff;
-font-weight: 500;
-line-height: 1em;
-font-size: 1em;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-text-align: center;
-}
-
-.content .title span {
-font-weight: 300;
-font-size: 0.70em;
-}
-
-.panel1 {
-  position: absolute;
-  top: 200px;
-  left: 50px;
-  width: 250px;
-  height: 950px;
-  background: #f00;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-
-.panel1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-}
-
-.panel1::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  filter: blur(30px);
-}
-
-.panel1 b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-
-.panel1 .content p {
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  padding: 10px;
-}
-
-.panel2 {
-
-  top: 200px;
-  position: absolute;
-  width: 250px;
-  height: 950px;
-  background: #f00;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  left: 84%;
-
-}
-
-
-.panel2::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-}
-
-.panel2::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg,#03a9f4,#ff0058);
-  filter: blur(30px);
-}
-
-.panel2 b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-
-.panel2 .content p {
-  size: 90%;
-  z-index: 3;
-  position: absolute;
-  top: 10px;
-  padding: 10px;
-}
-
-
-
-
-
-
-
-
-.placeholder1 {
-  width: 1900px;
-  height: 500px;
+.videocontainer1 {
+  background-color: #757575;
   position: relative;
-  background-color: #000000;
-  top: 500px;
-  left: 0;
-}
-
-.placeholder1 .triangle-link {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.placeholder1 .triangle-button1 {
-  position: absolute;
-  bottom: 0;
-  left: 32%;
-  width: 380px; 
-  height: 470px; 
-  background: #ff0000; 
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%); 
-  overflow: hidden; 
-  border: none; 
-  cursor: pointer; 
-  padding: 0; 
-  margin: 0; 
-  z-index: 1;
-  outline: none; 
-}
-
-
-.placeholder1 .triangle-button1 .img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
-
+  height: 800px;
+  top: 600px;
+  left: 0;
+  overflow: hidden;
 }
 
-.placeholder1 .triangle-button1:focus {
-  outline: none;
-}
-
-.placeholder1 .triangle-button1:hover {
-  border-bottom-color: #0056b3;
-}
-
-
-
-.placeholder1 .triangle-button2 {
+.videocontainer1 .placeholder1 {
   position: absolute;
-  bottom: 0;
-  left: 44.5%;
-  width: 380px; 
-  height: 470px; 
-  background: #ff0000; 
-  clip-path: polygon(100% 0%, 0% 100%, 100% 100%); 
-  overflow: hidden; 
-  border: none; 
-  cursor: pointer; 
-  padding: 0; 
+  top: 0%;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background: #000000;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  overflow: hidden;
+  border: none;
+  padding: 0;
   margin: 0;
   z-index: 1;
-  outline: none; 
+  outline: none;
 }
 
-
-.placeholder1 .triangle-button2 .img {
-  position: absolute;
-  top: 0;
-  left: 0;
+#vid1 {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-
-}
-
-.placeholder1 .triangle-button2:focus {
-  outline: none;
-}
-
-.placeholder1 .triangle-button2:hover {
-  border-bottom-color: #0056b3;
-}
-
-
-
-
-.placeholder1 .triangle-button3 {
+  top: 0%;
+  left: -10%;
   position: absolute;
-  top: 0;
-  left: 35.5%;
-  width: 500px; 
-  height: 470px; 
-  background: #ff0000; 
-  clip-path: polygon(50% 60%, 0% 0%, 100% 0%); 
-  overflow: hidden; 
-  border: none; 
-  cursor: pointer; 
-  padding: 0; 
-  margin: 0; 
-  outline: none; 
+  overflow: hidden;
 }
 
-
-.placeholder1 .triangle-button3 .img {
+.vfxinfo {
   position: absolute;
-  top: 0;
-  left: 0;
+  right: 0%;
+  font-size: 44px;
+  line-height: 50px;
+}
+
+.videocontainer2 {
+  background-color: #757575;
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
-
-}
-
-.placeholder1 .triangle-button3:focus {
-  outline: none;
-}
-
-.placeholder1 .triangle-button3:hover {
-  border-bottom-color: #0056b3;
-}
-
-.placeholder1 .rectangle-button1 {
-  background: transparent;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  position: absolute;
-  left: 16%;
-  top: 0;
   height: 500px;
-  width: 250px;
-  background-color: #ff0000;
-
+  top: 1000px;
+  left: 0;
+  overflow: hidden;
 }
 
-.placeholder1 .rectangle-button1 img {
+.videocontainer2 .placeholder2 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-}
-
-.placeholder1 .triangle-button:focus {
-  outline: none;
-}
-
-.placeholder1 .triangle-button:hover {
-  border-bottom-color: #0056b3;
-}
-
-
-.placeholder1 .rectangle-button2 {
-  background: transparent;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  position: absolute;
-  z-index: 1000;
-  left: 67%;
   top: 0;
-  height: 500px;
-  width: 250px;
-  background-color: #ff0000;
-
-}
-
-.placeholder1 .rectangle-button2 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
   width: 100%;
-  height: 100%;
-}
-
-.placeholder1 .triangle-button:focus {
+  height: 500px;
+  background: #000000;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
   outline: none;
 }
 
-.placeholder1 .triangle-button:hover {
-  border-bottom-color: #0056b3;
+#vid2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -20%;
 }
 
+.gamesinfo {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  font-size: 44px;
+  line-height: 50px;
+}
