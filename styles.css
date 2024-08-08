@@ -3,16 +3,10 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  background: grey;
 }
 
-.bck {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(grey, black);
-  width: 100%;
-  height: 420%;
-}
+
 
 .logo {
   width: 100px;
@@ -36,6 +30,8 @@ body {
   color: #fff;
 }
 
+
+/* rotating banner css*/
 .main-banner {
   margin: 0 auto;
   position: relative;
@@ -80,6 +76,8 @@ body {
   background-repeat: no-repeat;
 }
 
+
+/* first video container css*/
 .videocontainer1 {
   background: transparent;
   position: relative;
@@ -90,36 +88,38 @@ body {
   overflow: hidden;
 }
 
-.videocontainer1 .placeholder1 {
+.placeholder1 {
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 0;
+  width: 0%;
   height: 500px;
-  width: 100%;
   background: #000000;
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
   overflow: hidden;
-  border: none;
   padding: 0;
   margin: 0;
   z-index: 1;
   outline: none;
+  border-radius: 0px 250px 250px 0px;
 }
 
 #vid1 {
   width: 100%;
   height: 100%;
   top: 0%;
-  left: -10%;
+  left: -27%;
   position: absolute;
   overflow: hidden;
 }
 
 .vfxinfo {
+  color: white;
   position: absolute;
-  right: 0;
-  font-size: 44px;
-  line-height: 50px;
+  top: 25%;
+  right: 10%;
+  font-size: 20px;
+  z-index: 2;
+  opacity: 0;
 }
 
 
@@ -195,31 +195,32 @@ button {
   background: transparent;
 }
 
+/* second video container css*/
 
 .videocontainer2 {
   background: transparent;
   position: relative;
   width: 100%;
   height: 500px;
-  top: 1000px;
+  top: 900px;
   left: 0;
   overflow: hidden;
 }
 
-.videocontainer2 .placeholder2 {
+ .placeholder2 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 0%;
   height: 500px;
   background: #000000;
-  clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
   overflow: hidden;
-  border: none;
   padding: 0;
   margin: 0;
   z-index: 1;
   outline: none;
+  border-radius: 250px 0px 0px 250px;
+
 }
 
 #vid2 {
@@ -227,31 +228,102 @@ button {
   width: 100%;
   height: 100%;
   top: 0;
-  right: -20%;
+  right: -27%;
 }
 
 .gamesinfo {
+  z-index: 5;
+  color: #fff;
   position: absolute;
-  bottom: 0%;
-  left: 0%;
-  font-size: 44px;
-  line-height: 50px;
+  overflow: hidden;
+  top: 20%;
+  left: 10%;
+  font-size: 18px;
+  opacity: 0;
 }
+
+/*side navigation*/
+
+
+.sidenav {
+  height: 100%;
+  width: 0%; 
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+
+}
+
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 45;
+  background-color: #000;
+
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.menubtn {
+  top: 5%;
+  left: 40%;
+  position: absolute;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #9e9595;
+  box-shadow: 3px 3px 3px  black;
+}
+
+
+.closemenu {
+  top: 5%;
+  right: 10%;
+  position: absolute;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #9e9595;
+  box-shadow: 3px 3px 3px  black;
+}
+
 
 
 
 /* footer css*/
 
-.footer {
+.footercontainer {
   position: relative;
-  top: 1500px;
+  top: 1800px;
   left: 0;
   width: 100%;
   height: 400px;
+  overflow: hidden;
   background: transparent;
+
 }
 
- 
+.footer{
+  position: absolute;
+  top: 600px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 134, 134);
+} 
+
+
 .wrapper {
   position: absolute;
   display: inline-flex;
@@ -260,13 +332,14 @@ button {
   width: 100%;
   padding-top: 40px;
   font-family: "Poppins", sans-serif;
+  z-index: 5;
 }
 
 .wrapper .icon {
   position: relative;
   top: 0;
   left: 0;
-  background: #fff;
+  background: transparent;
   border-radius: 50%;
   margin: 10px;
   width: 50px;

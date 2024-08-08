@@ -69,23 +69,35 @@ function bannerLoop() {
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
-gsap.from(".vfxinfo", {
+
+
+// first video container and contents
+gsap.to(".placeholder1", {
   scrollTrigger: {
-    trigger: ".vfxinfo",
-    start: "center center",
-    markers: true,
+    trigger: ".placeholder1",
+    start: "top center",
     toggleActions: "play none none none",
   },
+  duration: 2,
+  width: "+99.5%",
+
+});
+
+gsap.to(".vfxinfo", {
+  scrollTrigger: {
+    trigger: ".vfxinfo",
+    start: "top 80%",
+    toggleActions: "play none none none"},
   duration: 1.5,
-  right: "-100%",
+  opacity: 1,
   ease: "power1.in",
+  delay: 1
 });
 
 gsap.from(".guidebutton", {
   scrollTrigger: {
     trigger: ".guidebutton",
     start: "top 50%",
-    markers: true,
     toggleActions: "play none none none",
   },
   duration: 1.5,
@@ -94,72 +106,107 @@ gsap.from(".guidebutton", {
 });
 
 
+//second video container and contents animations
+gsap.to(".placeholder2", {
+  scrollTrigger: {
+    trigger: ".placeholder2",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  width: "+99.5%",
 
+});
 
-gsap.from(".gamesinfo", {
+gsap.to(".gamesinfo", {
   scrollTrigger: {
     trigger: ".gamesinfo",
-    start: "top center",
+    start: "top 80%",
+
+    toggleActions: "play none none none"},
+  duration: 1.5,
+  opacity: 1,
+  ease: "power1.in",
+  delay: 1
+});
+
+
+//footer container and contents animation
+
+gsap.to(".footer", {
+  scrollTrigger: {
+    trigger: ".footercontainer",
+    start: "top 100%",
     markers: true,
     toggleActions: "play none none none",
   },
-  duration: 1.5,
-  left: "-100%",
+  duration: 1,
+  top: "0",
   ease: "power1.in",
 });
 
 
 
 
-
-
 gsap.from(".wrapper", {
   scrollTrigger: {
-    trigger: ".wrapper",
-    start: "top center",
-    markers: true,
+    trigger: ".footercontainer",
+    start: "top 80%",
     toggleActions: "play none none none",
   },
-  duration: 3.5,
+  duration: 2,
   right: "-100%",
   ease: "bounce",
+  delay: 1
 });
-
 
 gsap.to(".footerlinks", {
   scrollTrigger: {
-    trigger: ".footerlinks",
-    start: "top 40%",
-    markers: true,
+    trigger: ".footercontainer",
+    start: "top 80%",
     toggleActions: "play none none none",
   },
   duration: 2,
   opacity: "1",
-  delay: 4.
+  delay: 2,
 });
 
 gsap.to(".footerlinks2", {
   scrollTrigger: {
-    trigger: ".footerlinks",
-    start: "top 40%",
-    markers: true,
+    trigger: ".footercontainer",
+    start: "top 80%",
     toggleActions: "play none none none",
   },
   duration: 2,
   opacity: "1",
-  delay: 4.
+  delay: 2.5,
 });
-
 
 gsap.to(".footerlinks3", {
   scrollTrigger: {
-    trigger: ".footerlinks",
-    start: "top 40%",
-    markers: true,
+    trigger: ".footercontainer",
+    start: "top 80%",
     toggleActions: "play none none none",
   },
   duration: 2,
   opacity: "1",
-  delay: 4.
+  delay: 3,
 });
 
+
+
+
+
+
+function menuActive() {
+  gsap.to(".menubtn", { duration: 0.5, opacity: "0" });
+  gsap.to(".sidenav", { duration: 0.2, width: "10%", ease: "power1.in" });
+  gsap.to(".closemenu", {duration: 0.5, opacity: "1", delay:0.5});
+}
+
+function closeMenu() {
+  gsap.to(".menubtn", {duration: 0.5, opacity: "1", });
+  gsap.to(".sidenav", {duration: 0.2, width: "0%", ease: "power1.in"});
+  gsap.to(".closemenu", {duration: 0.5, opacity: "0"});
+
+}
