@@ -69,8 +69,6 @@ function bannerLoop() {
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
-
-
 // first video container and contents
 gsap.to(".placeholder1", {
   scrollTrigger: {
@@ -80,31 +78,31 @@ gsap.to(".placeholder1", {
   },
   duration: 2,
   width: "+99.5%",
-
 });
 
 gsap.to(".vfxinfo", {
   scrollTrigger: {
     trigger: ".vfxinfo",
     start: "top 80%",
-    toggleActions: "play none none none"},
+    toggleActions: "play none none none",
+  },
   duration: 1.5,
   opacity: 1,
   ease: "power1.in",
-  delay: 1
+  delay: 1,
 });
 
-gsap.from(".guidebutton", {
+gsap.to(".guidebutton1", {
   scrollTrigger: {
-    trigger: ".guidebutton",
+    trigger: ".videocontainer1",
     start: "top 50%",
     toggleActions: "play none none none",
   },
   duration: 1.5,
-  right: "-120%",
+  right: "10%",
   ease: "power1.in",
+  delay: 1,
 });
-
 
 //second video container and contents animations
 gsap.to(".placeholder2", {
@@ -115,7 +113,6 @@ gsap.to(".placeholder2", {
   },
   duration: 2,
   width: "+99.5%",
-
 });
 
 gsap.to(".gamesinfo", {
@@ -123,30 +120,72 @@ gsap.to(".gamesinfo", {
     trigger: ".gamesinfo",
     start: "top 80%",
 
-    toggleActions: "play none none none"},
+    toggleActions: "play none none none",
+  },
   duration: 1.5,
   opacity: 1,
   ease: "power1.in",
-  delay: 1
+  delay: 1,
 });
 
+gsap.to(".guidebutton2", {
+  scrollTrigger: {
+    trigger: ".videocontainer2",
+    start: "top 50%",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  left: "10%",
+  ease: "power1.in",
+  delay: 1,
+});
+
+// card animations
+
+gsap.to(".card1", {
+  scrollTrigger: {
+    trigger: ".cardcontainer",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  top: "0",
+});
+
+gsap.to(".card2", {
+  scrollTrigger: {
+    trigger: ".cardcontainer",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  top: "0",
+  delay: 0.5,
+});
+
+gsap.to(".card3", {
+  scrollTrigger: {
+    trigger: ".cardcontainer",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  top: "0",
+  delay: 1,
+});
 
 //footer container and contents animation
 
 gsap.to(".footer", {
   scrollTrigger: {
     trigger: ".footercontainer",
-    start: "top 100%",
-    markers: true,
+    start: "top 90%",
     toggleActions: "play none none none",
   },
   duration: 1,
   top: "0",
   ease: "power1.in",
 });
-
-
-
 
 gsap.from(".wrapper", {
   scrollTrigger: {
@@ -157,7 +196,7 @@ gsap.from(".wrapper", {
   duration: 2,
   right: "-100%",
   ease: "bounce",
-  delay: 1
+  delay: 1,
 });
 
 gsap.to(".footerlinks", {
@@ -193,20 +232,14 @@ gsap.to(".footerlinks3", {
   delay: 3,
 });
 
-
-
-
-
-
 function menuActive() {
   gsap.to(".menubtn", { duration: 0.5, opacity: "0" });
   gsap.to(".sidenav", { duration: 0.2, width: "10%", ease: "power1.in" });
-  gsap.to(".closemenu", {duration: 0.5, opacity: "1", delay:0.5});
+  gsap.to(".closemenu", { duration: 0.5, opacity: "1", delay: 0.5 });
 }
 
 function closeMenu() {
-  gsap.to(".menubtn", {duration: 0.5, opacity: "1", });
-  gsap.to(".sidenav", {duration: 0.2, width: "0%", ease: "power1.in"});
-  gsap.to(".closemenu", {duration: 0.5, opacity: "0"});
-
+  gsap.to(".menubtn", { duration: 0.5, opacity: "1" });
+  gsap.to(".sidenav", { duration: 0.2, width: "0%", ease: "power1.in" });
+  gsap.to(".closemenu", { duration: 0.5, opacity: "0" });
 }
