@@ -243,3 +243,17 @@ function closeMenu() {
   gsap.to(".sidenav", { duration: 0.2, width: "0%", ease: "power1.in" });
   gsap.to(".closemenu", { duration: 0.5, opacity: "0" });
 }
+
+
+function toggleMenu() {
+  var sideMenu = document.getElementById('sidenav');
+  
+
+  if (sideMenu.style.width === '40%') {
+    sideMenu.style.width = '0%';
+    
+  } else {
+    sideMenu.style.width = '40%';
+
+  }
+}
