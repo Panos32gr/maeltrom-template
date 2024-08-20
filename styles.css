@@ -9,12 +9,12 @@ body {
 /*top navigation*/
 
 .topnav {
-  height: 6vh;
-  width: 100%;
+  min-height: 48px;
+  max-width: 100%;
   position: relative;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #525252;
 }
 
 .dropdown1 {
@@ -27,10 +27,9 @@ body {
   background-color: #000000;
   color: white;
   padding: 16px;
-  height: 6vh;
+
   width: 105%;
-  font-size: 20px;
-  border: none;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -72,9 +71,9 @@ body {
   background-color: #000000;
   color: white;
   padding: 16px;
-  height: 6vh;
+  min-height: 100%;
   width: 165.5%;
-  font-size: 20px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -108,13 +107,13 @@ body {
 }
 
 .group {
-  top: 1vh;
-  left: 75vw;
+  position: relative;
+  top: 5%;
+  left: 70%;
   display: flex;
   line-height: 28px;
   align-items: center;
-  position: absolute;
-  width: 300px;
+  width: 30%;
 }
 
 .input {
@@ -152,15 +151,16 @@ input:hover {
 }
 
 .logo {
-  width: 40vw;
+  height: 100%;
+  width: 20vw;
   position: absolute;
-  top: 12;
+  top: 0;
   left: 0;
 }
 
 .logo img {
-  width: 10%;
-  top: 0;
+  width: 30%;
+  top: -40%;
   left: 0;
   position: absolute;
 }
@@ -177,8 +177,8 @@ input:hover {
 
 .main-banner {
   margin: 0 auto;
-  position: absolute;
-  width: 1200px;
+  position: relative;
+  width: 100%;
   height: 400px;
   background: #000;
   overflow: hidden;
@@ -225,7 +225,7 @@ input:hover {
   background: linear-gradient(180deg, purple, blue);
   position: relative;
   width: 100%;
-  height: 1500px;
+  height: 1000px;
   top: 600px;
   left: 0;
   overflow: hidden;
@@ -234,20 +234,19 @@ input:hover {
 #vid1 {
   width: 70%;
   height: 80%;
-  top: 0%;
+  top: -25%;
   left: 0%;
   position: absolute;
-  overflow: hidden;
   opacity: 0;
 }
 
 .vfxinfo {
+  max-width: 20%;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 25%;
-  right: 0%;
+  top: 100px;
+  right: 5%;
   font-size: 20px;
-  z-index: 2;
   opacity: 0;
 }
 
@@ -590,7 +589,7 @@ button {
   .main-banner {
     margin: 0 auto;
     position: relative;
-    width: 400px;
+    width: 80%;
     height: 400px;
     background-color: #000;
     overflow: hidden;
@@ -675,11 +674,12 @@ button {
   .vfxinfo {
     color: rgb(0, 0, 0);
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 3%;
     font-size: 20px;
     z-index: 2;
     opacity: 0;
+    width: 100%
   }
 
   .guidebutton1 {
