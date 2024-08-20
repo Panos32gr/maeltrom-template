@@ -1,3 +1,25 @@
+function menuActive() {
+  gsap.to(".menubtn", { duration: 0.5, opacity: "0" });
+  gsap.to(".sidenav", { duration: 0.2, width: "90%", ease: "power1.in" });
+  gsap.to(".closemenu", { duration: 0.5, opacity: "1", delay: 0.5 });
+}
+
+function closeMenu() {
+  gsap.to(".menubtn", { duration: 0.5, opacity: "1" });
+  gsap.to(".sidenav", { duration: 0.2, width: "0%", ease: "power1.in" });
+  gsap.to(".closemenu", { duration: 0.5, opacity: "0" });
+}
+
+function toggleMenu() {
+  var sideMenu = document.getElementById("sidenav");
+
+  if (sideMenu.style.width === "40%") {
+    sideMenu.style.width = "0%";
+  } else {
+    sideMenu.style.width = "40%";
+  }
+}
+
 //banner implementation
 
 var bannerStatus = 1;
@@ -69,15 +91,18 @@ function bannerLoop() {
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
+
+
 // first video container and contents
-gsap.to(".placeholder1", {
+
+gsap.to("#vid1", {
   scrollTrigger: {
-    trigger: ".placeholder1",
+    trigger: ".videocontainer1",
     start: "top center",
     toggleActions: "play none none none",
   },
   duration: 2,
-  width: "+99.5%",
+  opacity: 1,
 });
 
 gsap.to(".vfxinfo", {
@@ -99,26 +124,25 @@ gsap.to(".guidebutton1", {
     toggleActions: "play none none none",
   },
   duration: 1.5,
-  right: "10%",
-  ease: "power1.in",
-  delay: 1,
+  opacity: 1,
+  delay: 1.5,
 });
 
 //second video container and contents animations
-gsap.to(".placeholder2", {
+gsap.to("#vid2", {
   scrollTrigger: {
-    trigger: ".placeholder2",
+    trigger: ".videocontainer2",
     start: "top center",
     toggleActions: "play none none none",
   },
   duration: 2,
-  width: "+99.5%",
+  opacity: 1,
 });
 
 gsap.to(".gamesinfo", {
   scrollTrigger: {
     trigger: ".gamesinfo",
-    start: "top 80%",
+    start: "top 50%",
 
     toggleActions: "play none none none",
   },
@@ -135,43 +159,8 @@ gsap.to(".guidebutton2", {
     toggleActions: "play none none none",
   },
   duration: 1.5,
-  left: "10%",
-  ease: "power1.in",
-  delay: 1,
-});
-
-// card animations
-
-gsap.to(".card1", {
-  scrollTrigger: {
-    trigger: ".cardcontainer",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-  duration: 2,
-  top: "0",
-});
-
-gsap.to(".card2", {
-  scrollTrigger: {
-    trigger: ".cardcontainer",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-  duration: 2,
-  top: "0",
-  delay: 0.5,
-});
-
-gsap.to(".card3", {
-  scrollTrigger: {
-    trigger: ".cardcontainer",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-  duration: 2,
-  top: "0",
-  delay: 1,
+  opacity: 1,
+  delay: 1.5,
 });
 
 //footer container and contents animation
@@ -231,29 +220,3 @@ gsap.to(".footerlinks3", {
   opacity: "1",
   delay: 3,
 });
-
-function menuActive() {
-  gsap.to(".menubtn", { duration: 0.5, opacity: "0" });
-  gsap.to(".sidenav", { duration: 0.2, width: "10%", ease: "power1.in" });
-  gsap.to(".closemenu", { duration: 0.5, opacity: "1", delay: 0.5 });
-}
-
-function closeMenu() {
-  gsap.to(".menubtn", { duration: 0.5, opacity: "1" });
-  gsap.to(".sidenav", { duration: 0.2, width: "0%", ease: "power1.in" });
-  gsap.to(".closemenu", { duration: 0.5, opacity: "0" });
-}
-
-
-function toggleMenu() {
-  var sideMenu = document.getElementById('sidenav');
-  
-
-  if (sideMenu.style.width === '40%') {
-    sideMenu.style.width = '0%';
-    
-  } else {
-    sideMenu.style.width = '40%';
-
-  }
-}
