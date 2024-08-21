@@ -125,7 +125,7 @@ gsap.to(".guidebutton1", {
   },
   duration: 1.5,
   opacity: 1,
-  delay: 1.5,
+  delay: 1,
 });
 
 //second video container and contents animations
@@ -160,7 +160,7 @@ gsap.to(".guidebutton2", {
   },
   duration: 1.5,
   opacity: 1,
-  delay: 1.5,
+  delay: 1,
 });
 
 //footer container and contents animation
@@ -199,7 +199,7 @@ gsap.to(".footerlinks", {
   delay: 2,
 });
 
-gsap.to(".footerlinks2", {
+gsap.to(".mail", {
   scrollTrigger: {
     trigger: ".footercontainer",
     start: "top 80%",
@@ -210,7 +210,7 @@ gsap.to(".footerlinks2", {
   delay: 2.5,
 });
 
-gsap.to(".footerlinks3", {
+gsap.to(".corp", {
   scrollTrigger: {
     trigger: ".footercontainer",
     start: "top 80%",
@@ -220,3 +220,6 @@ gsap.to(".footerlinks3", {
   opacity: "1",
   delay: 3,
 });
+
+
+

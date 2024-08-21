@@ -14,10 +14,11 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  background-color: #525252;
+  background-color: #353535;
 }
 
 .dropdown1 {
+  top: 0;
   left: 30vw;
   position: absolute;
   display: inline-block;
@@ -27,7 +28,6 @@ body {
   background-color: #000000;
   color: white;
   padding: 16px;
-
   width: 105%;
   font-size: 14px;
   cursor: pointer;
@@ -58,19 +58,21 @@ body {
 }
 
 .dropdown1:hover .dropbtn1 {
-  background-color: hsl(0, 100%, 47%);
+  background-color: hsl(0, 0%, 59%);
 }
 
 .dropdown2 {
+  top: 0;
   left: 50vw;
   position: absolute;
-  display: inline-block;
 }
 
 .dropbtn2 {
+  top: 0;
   background-color: #000000;
   color: white;
   padding: 16px;
+  margin: 0;
   min-height: 100%;
   width: 165.5%;
   font-size: 14px;
@@ -103,17 +105,17 @@ body {
 }
 
 .dropdown2:hover .dropbtn2 {
-  background-color: hsl(0, 100%, 47%);
+  background-color: hsl(0, 0%, 59%);
 }
 
 .group {
   position: relative;
   top: 5%;
-  left: 70%;
+  left: 75%;
   display: flex;
   line-height: 28px;
   align-items: center;
-  width: 30%;
+  width: 20%;
 }
 
 .input {
@@ -159,7 +161,7 @@ input:hover {
 }
 
 .logo img {
-  width: 30%;
+  width: 23%;
   top: -40%;
   left: 0;
   position: absolute;
@@ -222,7 +224,7 @@ input:hover {
 
 /* first video container css*/
 .videocontainer1 {
-  background: linear-gradient(180deg, purple, blue);
+  background: linear-gradient(180deg, #353535, #757575);
   position: relative;
   width: 100%;
   height: 1000px;
@@ -242,17 +244,19 @@ input:hover {
 
 .vfxinfo {
   max-width: 20%;
+  max-height: 250px;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 100px;
+  top: 50px;
   right: 5%;
   font-size: 20px;
   opacity: 0;
+  overflow: hidden;
 }
 
 .guidebutton1 {
-  top: 30%;
-  right: 10%;
+  top: 35%;
+  right: 5%;
   width: 140px;
   height: auto;
   float: left;
@@ -326,7 +330,7 @@ button {
 /* second video container css*/
 
 .videocontainer2 {
-  background: linear-gradient(180deg, blue, red);
+  background: linear-gradient(180deg, #757575, #838383);
   position: relative;
   width: 100%;
   height: 1300px;
@@ -339,20 +343,21 @@ button {
   position: absolute;
   width: 70%;
   height: 70%;
-  top: 0;
+  top: -15%;
   right: -10%;
   opacity: 0;
 }
 
 .gamesinfo {
-  z-index: 5;
-  color: #000000;
+  max-width: 20%;
+  max-height: 250px;
+  color: rgb(0, 0, 0);
   position: absolute;
-  overflow: hidden;
-  top: 20%;
-  left: 2%;
-  font-size: 22px;
+  top: 50px;
+  left: 5%;
+  font-size: 20px;
   opacity: 0;
+  overflow: hidden;
 }
 
 .guidebutton2 {
@@ -428,7 +433,7 @@ button {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background: linear-gradient(180deg, red, black);
+  background: linear-gradient(180deg, #838383, white);
 }
 
 .footer {
@@ -536,45 +541,42 @@ button {
   font-size: 20px;
   color: #fff;
   opacity: 0;
+  line-height: 50px;
 }
 
-.footerlinks2 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  color: #fff;
-  opacity: 0;
-}
 
-.footerlinks3 {
-  position: absolute;
-  top: 0;
-  left: 70%;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  color: #fff;
-  opacity: 0;
-}
 
 .footerlinks a {
-  margin: 10px;
+
   text-decoration: none;
   color: #ffffff;
 }
 
-.footerlinks2 a {
-  margin: 10px;
-  text-decoration: none;
-  color: #ffffff;
+
+
+
+.corp, .mail {
+  width: 2%;
 }
 
-.footerlinks3 a {
-  margin: 10px;
-  text-decoration: none;
-  color: #ffffff;
+
+.mail {
+  position: absolute;
+  top: 22%;
+  left: 25%;
+  opacity: 0;
 }
+
+
+.corp {
+  position: absolute;
+  top: 38%;
+  left: 25%;
+  opacity: 0;
+}
+
+
+
 
 /* mobile view*/
 
@@ -584,6 +586,29 @@ button {
     padding: 0;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+  }
+
+  .logo {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo img {
+    width: 50%;
+    top: 1%;
+    left: 0;
+    position: absolute;
+  }
+  
+  .logo p {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    font-size: 1.35em;
+    color: #000000;
   }
 
   .main-banner {
@@ -639,14 +664,36 @@ button {
     background-color: #000000;
   }
 
+
+
   .sidenav {
-    background-color: #000;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
     top: 0;
     left: 0;
-    position: fixed;
-    width: 0%;
-    height: 100%;
-    z-index: 20000;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .sidenav a {
+    color: #ffffff;
+    text-decoration: none;
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 26px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    display: block;
+    position: relative;
+    top: 300px;
+  }
+
+  .sidenav a:hover {
+    background-color: #1877f2;
   }
 
   .placeholder1 {
@@ -672,18 +719,19 @@ button {
   }
 
   .vfxinfo {
+    max-width: 60%;
     color: rgb(0, 0, 0);
     position: absolute;
     top: 50%;
     left: 3%;
-    font-size: 20px;
     z-index: 2;
     opacity: 0;
-    width: 100%
   }
 
+
+
   .guidebutton1 {
-    top: 40%;
+    top: 80%;
     right: 5%;
     width: 100px;
     height: auto;
@@ -774,19 +822,20 @@ button {
   }
 
   .gamesinfo {
+    max-width: 60%;
     z-index: 5;
     color: #000000;
     position: absolute;
     overflow: hidden;
-    top: 30%;
+    top: 35%;
     left: 2%;
     font-size: 22px;
     opacity: 0;
   }
 
   .guidebutton2 {
-    top: 40%;
-    left: 50%;
+    top: 70%;
+    left: 70%;
     width: 140px;
     height: auto;
     float: left;
@@ -851,32 +900,13 @@ button {
   .footerlinks {
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 15%;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     color: #fff;
     opacity: 0;
   }
 
-  .footerlinks2 {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    color: #fff;
-    opacity: 0;
-  }
-
-  .footerlinks3 {
-    position: absolute;
-    top: 0;
-    left: 90%;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    color: #fff;
-    opacity: 0;
-  }
 
   .footerlinks a {
     margin: 10px;
@@ -884,17 +914,31 @@ button {
     color: #ffffff;
   }
 
-  .footerlinks2 a {
-    margin: 10px;
-    text-decoration: none;
-    color: #ffffff;
+  .corp, .mail {
+    width: 5%;
   }
+  
+  
+  .mail {
+    position: absolute;
+    top: 62%;
+    left: 5%;
+    opacity: 0;
+  }
+  
+  
+  .corp {
+    position: absolute;
+    top: 76%;
+    left: 5%;
+    opacity: 0;
+  }
+  
 
-  .footerlinks3 a {
-    margin: 10px;
-    text-decoration: none;
-    color: #ffffff;
-  }
+
+
+
+  
 
   .topnav {
     display: none;
@@ -908,7 +952,5 @@ button {
     display: none;
   }
 
-  .logo {
-    display: none;
-  }
+
 }
