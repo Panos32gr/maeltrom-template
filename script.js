@@ -72,11 +72,11 @@ function bannerLoop() {
     document.getElementById("imgban1").style.opacity = "0";
 
     setTimeout(function () {
-      document.getElementById("imgban3").style.right = "0px";
+      document.getElementById("imgban3").style.right = "0%";
       document.getElementById("imgban3").style.zIndex = "1000";
-      document.getElementById("imgban1").style.right = "-1200px";
+      document.getElementById("imgban1").style.right = "-100%";
       document.getElementById("imgban1").style.zIndex = "1500";
-      document.getElementById("imgban2").style.right = "2000px";
+      document.getElementById("imgban2").style.right = "200%";
       document.getElementById("imgban2").style.zIndex = "500";
     }, 500);
 
@@ -128,6 +128,30 @@ gsap.to(".guidebutton1", {
   delay: 1,
 });
 
+gsap.to(".card", {
+  scrollTrigger: {
+    trigger: ".videocontainer1",
+    start: "center center",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  opacity: 1,
+  right: "10%",
+  delay: 0.5
+})
+
+gsap.to(".card2", {
+  scrollTrigger: {
+    trigger: ".videocontainer1",
+    start: "center center",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  opacity: 1,
+  left: "10%",
+  delay: 0.5
+})
+
 //second video container and contents animations
 gsap.to("#vid2", {
   scrollTrigger: {
@@ -162,6 +186,27 @@ gsap.to(".guidebutton2", {
   opacity: 1,
   delay: 1,
 });
+
+
+gsap.to(".card3", {
+  scrollTrigger: {
+    trigger: ".videocontainer2",
+    start: "center center",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  top: "65%",
+})
+
+gsap.to(".card4", {
+  scrollTrigger: {
+    trigger: ".videocontainer2",
+    start: "center center",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  bottom: "12%",
+})
 
 //footer container and contents animation
 
