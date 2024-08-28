@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background: none;
+  background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
 }
 
 /*top navigation*/
@@ -14,7 +14,6 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  background-color: #353535;
 }
 
 .dropdown1 {
@@ -100,7 +99,7 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 500;
+  z-index: 1;
 }
 
 .dropdown-content2 a {
@@ -142,7 +141,7 @@ body {
 }
 
 .group {
-  position: relative;
+  position: absolute;
   top: 5%;
   left: 75%;
   display: flex;
@@ -220,7 +219,7 @@ input:hover {
   top: 200px;
   left: 0;
   position: relative;
-  z-index: 10000;
+  z-index: 4;
 }
 
 .main-banner .imgban {
@@ -257,7 +256,6 @@ input:hover {
 
 /* first video container css*/
 .videocontainer1 {
-  background: linear-gradient(180deg, #353535, #757575);
   position: relative;
   width: 100%;
   height: 1600px;
@@ -303,7 +301,7 @@ input:hover {
   background: transparent;
   text-transform: uppercase;
   font-weight: 900;
-  z-index: 5;
+  z-index: 1;
   opacity: 0;
 }
 
@@ -370,7 +368,7 @@ button {
   background: #131313;
   overflow: hidden;
   border-radius: 20px;
-  opacity: 0
+  opacity: 0;
 }
 
 .temporary_text {
@@ -445,7 +443,7 @@ button {
   background: #131313;
   overflow: hidden;
   border-radius: 20px;
-  opacity: 0
+  opacity: 0;
 }
 
 .temporary_text2 {
@@ -513,7 +511,6 @@ button {
 /* second video container css*/
 
 .videocontainer2 {
-  background: linear-gradient(180deg, #757575, #838383);
   position: relative;
   width: 100%;
   height: 1500px;
@@ -559,7 +556,7 @@ button {
   background: transparent;
   text-transform: uppercase;
   font-weight: 900;
-  z-index: 5;
+  z-index: 1;
   opacity: 0;
 }
 
@@ -660,7 +657,6 @@ button {
   line-height: 15px;
 }
 
-
 .card_description3 {
   font-size: 14px;
   opacity: 0;
@@ -675,8 +671,6 @@ button {
   opacity: 1;
   transition-delay: 0.25s;
 }
-
-
 
 .card4 {
   right: 10%;
@@ -731,7 +725,6 @@ button {
   line-height: 15px;
 }
 
-
 .card_description4 {
   font-size: 14px;
   opacity: 0;
@@ -747,10 +740,6 @@ button {
   transition-delay: 0.25s;
 }
 
-
-
-
-
 /* footer css*/
 
 .footercontainer {
@@ -760,7 +749,6 @@ button {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background: linear-gradient(180deg, #838383, white);
 }
 
 .footer {
@@ -868,6 +856,7 @@ button {
   font-size: 20px;
   color: #fff;
   opacity: 0;
+  padding: 5px;
   line-height: 50px;
 }
 
@@ -876,6 +865,7 @@ button {
   color: #ffffff;
 }
 
+/* shared attributes between deco svg's in this class*/
 .corp,
 .mail {
   width: 2%;
@@ -897,12 +887,13 @@ button {
 
 /* mobile view*/
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
   }
 
   .logo {
@@ -972,20 +963,44 @@ button {
     background-repeat: no-repeat;
   }
 
-  .openmenu {
-    width: 10%;
-    height: 2%;
-    right: 10%;
-    top: 5%;
+  .menucontainer {
     position: absolute;
-    background-color: #000000;
+    right: 20%;
+    top: 10%;
+    display: inline-block;
+    cursor: pointer;
   }
 
-  .sidenav {
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .topnav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10000;
+    z-index: 6;
     top: 0;
     left: 0;
     background-color: #000000;
@@ -993,7 +1008,7 @@ button {
     transition: 0.5s;
   }
 
-  .sidenav a {
+  .topnav a {
     color: #ffffff;
     text-decoration: none;
     float: none;
@@ -1007,27 +1022,174 @@ button {
     top: 300px;
   }
 
-  .sidenav a:hover {
-    background-color: #1877f2;
+  .dropdown1 {
+    top: 15%;
+    left: 0;
+    position: absolute;
+    display: block;
   }
 
-  .placeholder1 {
+  .dropbtn1 {
+    background: transparent;
+    color: white;
+    padding: 16px;
+    width: 115%;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 15%;
+    left: 95%;
+    color: #fff;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+  }
+
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content1 a {
+    top: 0;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown1:hover .arrow {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+  }
+
+  .dropdown-content1 a:hover {
+    background-color: #686868;
+  }
+
+  .dropdown1:hover .dropdown-content1 {
+    display: inline-block;
+  }
+
+  .dropdown1:hover .dropbtn1 {
+    background-color: hsl(0, 0%, 59%);
+  }
+
+  .dropdown2 {
+    top: 30%;
+    left: 0;
+    position: absolute;
+  }
+
+  .dropbtn2 {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    padding: 0;
+    background: transparent;
+    color: white;
+    padding: 16px;
     margin: 0;
-    z-index: 1;
-    outline: none;
-    border-radius: 0px 0px 0px 0px;
+    min-height: 100%;
+    width: 165.5%;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content2 a {
+    top: 0;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown2:hover .arrow2 {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+  }
+
+  .dropdown-content2 a:hover {
+    background-color: #686868;
+  }
+
+  .dropdown2:hover .dropdown-content2 {
+    display: block;
+  }
+
+  .dropdown2:hover .dropbtn2 {
+    background-color: hsl(0, 0%, 59%);
+  }
+
+  .dropdown2:hover::after .arrow2 {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+  }
+
+  .arrow2 {
+    position: absolute;
+    width: 23%;
+    left: 115%;
+    color: #fff;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+  }
+
+  .group {
+    width: 90%;
+    height: 5%;
+    left: 0;
+    top: 90%;
+  }
+
+  .logo {
+    height: 10%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .logo img {
+    width: 23%;
+    top: 0%;
+    left: 0;
+    position: absolute;
+  }
+
+  .logo p {
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    font-size: 1.35em;
+    color: #fff;
+  }
+
+  .videocontainer1 {
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    top: 600px;
+    left: 0;
+    overflow: hidden;
   }
 
   #vid1 {
     width: 100%;
     height: 100%;
-    top: -30%;
+    top: -40%;
     left: 0%;
     position: absolute;
     overflow: hidden;
@@ -1037,14 +1199,14 @@ button {
     max-width: 60%;
     color: rgb(0, 0, 0);
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 3%;
     z-index: 2;
     opacity: 0;
   }
 
   .guidebutton1 {
-    top: 80%;
+    top: 40%;
     right: 5%;
     width: 100px;
     height: auto;
@@ -1117,10 +1279,160 @@ button {
     background: transparent;
   }
 
+  .card {
+    right: 200%;
+    bottom: 30%;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 0;
+  }
+
+  .temporary_text {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+  }
+
+  .card_title {
+    font-weight: bold;
+  }
+
+  .card_content {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    transform: translateY(150px);
+    transition: transform 0.25s;
+  }
+
+  .card_content::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+
+  .card_title {
+    color: #131313;
+    line-height: 15px;
+  }
+
+  .card_subtitle {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card_description {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .card:hover .card_content {
+    transform: translateY(70px);
+  }
+
+  .card:hover .card_description {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+
+  .card2 {
+    left: 200%;
+    bottom: 5%;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 0;
+  }
+
+  .temporary_text2 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+  }
+
+  .card_title2 {
+    font-weight: bold;
+  }
+
+  .card_content2 {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    transform: translateY(150px);
+    transition: transform 0.25s;
+  }
+
+  .card_content2::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+
+  .card_title2 {
+    color: #131313;
+    line-height: 15px;
+  }
+
+  .card_subtitle2 {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card_description2 {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .card2:hover .card_content2 {
+    transform: translateY(70px);
+  }
+
+  .card2:hover .card_description2 {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+
   .videocontainer2 {
     position: relative;
     width: 100%;
-    height: 1300px;
+    height: 2000px;
     top: 600px;
     left: 0;
     overflow: hidden;
@@ -1140,14 +1452,14 @@ button {
     color: #000000;
     position: absolute;
     overflow: hidden;
-    top: 35%;
+    top: 30%;
     left: 2%;
     font-size: 22px;
     opacity: 0;
   }
 
   .guidebutton2 {
-    top: 70%;
+    top: 40%;
     left: 70%;
     width: 140px;
     height: auto;
@@ -1210,6 +1522,142 @@ button {
     transition: 0.3s transform linear, 0.3s height linear 0.5s;
   }
 
+  .card3 {
+    left: 10%;
+    top: -100%;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .temporary_text3 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+  }
+
+  .card_title3 {
+    font-weight: bold;
+  }
+
+  .card_content3 {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    transform: translateY(150px);
+    transition: transform 0.25s;
+  }
+
+  .card_content3::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+
+  .card_title3 {
+    color: #131313;
+    line-height: 15px;
+  }
+
+  .card_description3 {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .card3:hover .card_content3 {
+    transform: translateY(70px);
+  }
+
+  .card3:hover .card_description3 {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+
+  .card4 {
+    right: 10%;
+    bottom: -100%;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .temporary_text4 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+  }
+
+  .card_title4 {
+    font-weight: bold;
+  }
+
+  .card_content4 {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    transform: translateY(150px);
+    transition: transform 0.25s;
+  }
+
+  .card_content4::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+
+  .card_title4 {
+    color: #131313;
+    line-height: 15px;
+  }
+
+  .card_description4 {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .card4:hover .card_content4 {
+    transform: translateY(70px);
+  }
+
+  .card4:hover .card_description4 {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+
   .footerlinks {
     position: absolute;
     top: 40%;
@@ -1243,17 +1691,5 @@ button {
     top: 76%;
     left: 5%;
     opacity: 0;
-  }
-
-  .topnav {
-    display: none;
-  }
-
-  .dropdown1 {
-    display: none;
-  }
-
-  .dropdown2 {
-    display: none;
   }
 }

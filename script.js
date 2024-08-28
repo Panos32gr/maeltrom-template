@@ -1,22 +1,12 @@
-function menuActive() {
-  gsap.to(".menubtn", { duration: 0.5, opacity: "0" });
-  gsap.to(".sidenav", { duration: 0.2, width: "90%", ease: "power1.in" });
-  gsap.to(".closemenu", { duration: 0.5, opacity: "1", delay: 0.5 });
-}
-
-function closeMenu() {
-  gsap.to(".menubtn", { duration: 0.5, opacity: "1" });
-  gsap.to(".sidenav", { duration: 0.2, width: "0%", ease: "power1.in" });
-  gsap.to(".closemenu", { duration: 0.5, opacity: "0" });
-}
-
 function toggleMenu() {
-  var sideMenu = document.getElementById("sidenav");
+  var sideMenu = document.getElementById("topnav");
+  var menu = document.getElementById("menucontainer");
 
-  if (sideMenu.style.width === "40%") {
-    sideMenu.style.width = "0%";
+  if (sideMenu.style.width === "0%") {
+    gsap.to(".topnav", { duration: 0.2, width: "40%", ease: "power1.in" });
+    menu.classList.toggle("change");
   } else {
-    sideMenu.style.width = "40%";
+    gsap.to(".topnav", { duration: 0.2, width: "0%", ease: "power1.in" });
   }
 }
 
@@ -39,11 +29,11 @@ function bannerLoop() {
 
     setTimeout(function () {
       document.getElementById("imgban1").style.right = "0px";
-      document.getElementById("imgban1").style.zIndex = "1000";
+      document.getElementById("imgban1").style.zIndex = "0";
       document.getElementById("imgban2").style.right = "-1200px";
-      document.getElementById("imgban2").style.zIndex = "1500";
+      document.getElementById("imgban2").style.zIndex = "1";
       document.getElementById("imgban3").style.right = "1200px";
-      document.getElementById("imgban3").style.zIndex = "500";
+      document.getElementById("imgban3").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -91,8 +81,6 @@ function bannerLoop() {
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
-
-
 // first video container and contents
 
 gsap.to("#vid1", {
@@ -137,8 +125,8 @@ gsap.to(".card", {
   duration: 1.5,
   opacity: 1,
   right: "10%",
-  delay: 0.5
-})
+  delay: 0.5,
+});
 
 gsap.to(".card2", {
   scrollTrigger: {
@@ -149,8 +137,8 @@ gsap.to(".card2", {
   duration: 1.5,
   opacity: 1,
   left: "10%",
-  delay: 0.5
-})
+  delay: 0.5,
+});
 
 //second video container and contents animations
 gsap.to("#vid2", {
@@ -179,7 +167,7 @@ gsap.to(".gamesinfo", {
 gsap.to(".guidebutton2", {
   scrollTrigger: {
     trigger: ".videocontainer2",
-    start: "top 50%",
+    start: "top center",
     toggleActions: "play none none none",
   },
   duration: 1.5,
@@ -187,26 +175,45 @@ gsap.to(".guidebutton2", {
   delay: 1,
 });
 
-
-gsap.to(".card3", {
-  scrollTrigger: {
-    trigger: ".videocontainer2",
-    start: "center center",
-    toggleActions: "play none none none",
-  },
-  duration: 1.5,
-  top: "65%",
-})
-
-gsap.to(".card4", {
-  scrollTrigger: {
-    trigger: ".videocontainer2",
-    start: "center center",
-    toggleActions: "play none none none",
-  },
-  duration: 1.5,
-  bottom: "12%",
-})
+if (window.innerWidth < 800) {
+  gsap.to(".card3", {
+    scrollTrigger: {
+      trigger: ".videocontainer2",
+      start: "center center",
+      toggleActions: "play none none none",
+    },
+    duration: 1.5,
+    top: "50%",
+  }),
+    gsap.to(".card4", {
+      scrollTrigger: {
+        trigger: ".videocontainer2",
+        start: "center center",
+        toggleActions: "play none none none",
+      },
+      duration: 1.5,
+      bottom: "5%",
+    });
+} else {
+  gsap.to(".card3", {
+    scrollTrigger: {
+      trigger: ".videocontainer2",
+      start: "center center",
+      toggleActions: "play none none none",
+    },
+    duration: 1.5,
+    top: "65%",
+  }),
+    gsap.to(".card4", {
+      scrollTrigger: {
+        trigger: ".videocontainer2",
+        start: "center center",
+        toggleActions: "play none none none",
+      },
+      duration: 1.5,
+      bottom: "12%",
+    });
+}
 
 //footer container and contents animation
 
@@ -265,6 +272,3 @@ gsap.to(".corp", {
   opacity: "1",
   delay: 3,
 });
-
-
-

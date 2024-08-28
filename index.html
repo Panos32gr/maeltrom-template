@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <div class="topnav">
+    <div class="topnav" id="topnav">
       <div class="group">
         <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
           <g>
@@ -247,13 +247,11 @@
     </div>
   </div>
 
-    <button class="openmenu" onclick="toggleMenu()"></button>
-
-    <div id="sidenav" class="sidenav">
-      <a href="">Visual Effects</a>
-      <a href="">Game Development</a>
-      <a href="">Contact us</a>
-    </div>
+  <div class="menucontainer" onclick="toggleMenu()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
 
     <script src="script.js"></script>
   </body>
