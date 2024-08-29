@@ -83,6 +83,7 @@ gsap.registerPlugin("scrollTrigger");
 
 // first video container and contents
 
+
 gsap.to("#vid1", {
   scrollTrigger: {
     trigger: ".videocontainer1",

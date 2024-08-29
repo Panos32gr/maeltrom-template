@@ -966,7 +966,7 @@ button {
   .menucontainer {
     position: absolute;
     right: 20%;
-    top: 10%;
+    top: 2%;
     display: inline-block;
     cursor: pointer;
   }
@@ -996,6 +996,8 @@ button {
     transform: translate(0, -11px) rotate(45deg);
   }
 
+
+  /* by adjusting the height of the top navigation bar to cover 100% of height* it becomes a side navigation */
   .topnav {
     height: 100%;
     width: 0;
@@ -1011,9 +1013,8 @@ button {
   .topnav a {
     color: #ffffff;
     text-decoration: none;
-    float: none;
     display: block;
-    text-align: left;
+
     padding: 26px;
     font-size: 18px;
     font-family: "Poppins", sans-serif;
@@ -1156,14 +1157,13 @@ button {
 
   .logo {
     height: 10%;
-    width: 90%;
+    width: 70%;
     position: absolute;
     top: 0;
     left: 0;
   }
 
   .logo img {
-    width: 23%;
     top: 0%;
     left: 0;
     position: absolute;
@@ -1270,14 +1270,7 @@ button {
     transition: 0.3s transform linear, 0.3s height linear 0.5s;
   }
 
-  button {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background: transparent;
-  }
+
 
   .card {
     right: 200%;
