@@ -2,18 +2,19 @@ function toggleMenu() {
   var sideMenu = document.getElementById("topnav");
   var menu = document.getElementById("menucontainer");
 
-  if (sideMenu.style.width === "0%") {
-    gsap.to(".topnav", { duration: 0.2, width: "40%", ease: "power1.in" });
+  if (sideMenu.style.width === "0px") {
+    gsap.to(".topnav", { duration: 0.2, width: "300px", ease: "power1.in" });
     menu.classList.toggle("change");
   } else {
-    gsap.to(".topnav", { duration: 0.2, width: "0%", ease: "power1.in" });
+    gsap.to(".topnav", { duration: 0.2, width: "0px", ease: "power1.in" });
+    menu.classList.remove("change");
   }
 }
 
 //banner implementation
 
 var bannerStatus = 1;
-var bannerTimer = 4000;
+var bannerTimer = 6000;
 
 window.onload = function () {
   bannerLoop();
@@ -45,7 +46,7 @@ function bannerLoop() {
     document.getElementById("imgban3").style.opacity = "0";
 
     setTimeout(function () {
-      document.getElementById("imgban2").style.right = "0px";
+      document.getElementById("imgban2").style.right = "0%";
       document.getElementById("imgban2").style.zIndex = "1000";
       document.getElementById("imgban3").style.right = "-1200px";
       document.getElementById("imgban3").style.zIndex = "1500";
@@ -97,7 +98,7 @@ gsap.to("#vid1", {
 gsap.to(".vfxinfo", {
   scrollTrigger: {
     trigger: ".vfxinfo",
-    start: "top 80%",
+    start: "top 50%",
     toggleActions: "play none none none",
   },
   duration: 1.5,
@@ -168,7 +169,7 @@ gsap.to(".gamesinfo", {
 gsap.to(".guidebutton2", {
   scrollTrigger: {
     trigger: ".videocontainer2",
-    start: "top center",
+    start: "top 50%",
     toggleActions: "play none none none",
   },
   duration: 1.5,
@@ -184,7 +185,7 @@ if (window.innerWidth < 800) {
       toggleActions: "play none none none",
     },
     duration: 1.5,
-    top: "50%",
+    top: "55%",
   }),
     gsap.to(".card4", {
       scrollTrigger: {
@@ -193,7 +194,7 @@ if (window.innerWidth < 800) {
         toggleActions: "play none none none",
       },
       duration: 1.5,
-      bottom: "5%",
+      bottom: "10%",
     });
 } else {
   gsap.to(".card3", {

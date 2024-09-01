@@ -6,6 +6,10 @@ body {
   background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
 }
 
+.mobilelogo {
+  opacity: 0;
+}
+
 /*top navigation*/
 
 .topnav {
@@ -29,6 +33,7 @@ body {
   padding: 16px;
   width: 115%;
   font-size: 14px;
+  border: none;
   cursor: pointer;
 }
 
@@ -71,7 +76,7 @@ body {
 }
 
 .dropdown1:hover .dropbtn1 {
-  background-color: hsl(0, 0%, 59%);
+  background-color: #00224d;
 }
 
 .dropdown2 {
@@ -123,7 +128,7 @@ body {
 }
 
 .dropdown2:hover .dropbtn2 {
-  background-color: hsl(0, 0%, 59%);
+  background-color: #00224d;
 }
 
 .dropdown2:hover::after .arrow2 {
@@ -185,25 +190,31 @@ input:hover {
 }
 
 .logo {
-  height: 100%;
+  height: 50%;
   width: 20vw;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.logo img {
-  width: 23%;
-  top: -40%;
+  
+.logo a{ 
+  top: 0;
   left: 0;
+}
+
+.logo img {
+  width: 15%;
+  top: 10%;
+  left: 5%;
   position: absolute;
 }
 
 .logo p {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 100px;
-  font-size: 1.35em;
+  font-size: 1.25em;
   color: #fff;
 }
 
@@ -212,7 +223,7 @@ input:hover {
 .main-banner {
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  width: 1200px;
   height: 400px;
   background: #000;
   overflow: hidden;
@@ -234,21 +245,21 @@ input:hover {
 }
 
 .main-banner #imgban3 {
-  background-image: url("images/bnr1.jpg");
+  background-image: url("images/modeling_VRGlasses_Sillouhete_002_0028.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .main-banner #imgban2 {
-  background-image: url("images/bnr2.jpg");
+  background-image: url("images/Room_Gravity_001_0055.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .main-banner #imgban1 {
-  background-image: url("images/bn3.jpg");
+  background-image: url("images/TV_Dark_Front_001_02.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -265,8 +276,8 @@ input:hover {
 }
 
 #vid1 {
-  width: 70%;
-  height: 80%;
+  width: 60%;
+  height: 70%;
   top: -17%;
   left: 0%;
   position: absolute;
@@ -276,7 +287,7 @@ input:hover {
 .vfxinfo {
   max-width: 20%;
   max-height: 250px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 50px;
   right: 5%;
@@ -292,9 +303,11 @@ input:hover {
   height: auto;
   float: left;
   transition: 0.5s linear;
+  color: #fff;
   position: absolute;
   display: block;
   overflow: hidden;
+  border: none;
   padding: 15px;
   text-align: center;
   margin: 0 5px;
@@ -303,6 +316,7 @@ input:hover {
   font-weight: 900;
   z-index: 1;
   opacity: 0;
+  cursor: pointer;
 }
 
 .guidebutton1:before {
@@ -336,26 +350,17 @@ input:hover {
 }
 
 .guidebutton1:hover:before {
-  border-color: #000000;
+  border-color: #fff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .guidebutton1:hover:after {
-  border-color: #000000;
+  border-color: #fff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.5s;
-}
-
-button {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: transparent;
 }
 
 .card {
@@ -521,17 +526,17 @@ button {
 
 #vid2 {
   position: absolute;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   top: -15%;
-  right: -10%;
+  right: 0%;
   opacity: 0;
 }
 
 .gamesinfo {
-  max-width: 20%;
+  max-width: 25%;
   max-height: 250px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 50px;
   left: 5%;
@@ -550,14 +555,17 @@ button {
   position: absolute;
   display: block;
   overflow: hidden;
+  border: none;
   padding: 15px;
   text-align: center;
   margin: 0 5px;
+  color: #fff;
   background: transparent;
   text-transform: uppercase;
   font-weight: 900;
   z-index: 1;
   opacity: 0;
+  cursor: pointer;
 }
 
 .guidebutton2:before {
@@ -587,18 +595,18 @@ button {
 }
 
 .guidebutton2:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
 }
 
 .guidebutton2:hover:before {
-  border-color: #000000;
+  border-color: #fff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .guidebutton2:hover:after {
-  border-color: #000000;
+  border-color: #fff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.5s;
@@ -896,27 +904,34 @@ button {
     background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
   }
 
-  .logo {
-    height: 100%;
-    width: 20%;
-    position: absolute;
+
+
+  .mobilelogo {
     top: 0;
     left: 0;
-  }
-
-  .logo img {
-    width: 50%;
-    top: 1%;
-    left: 0;
+    width: 100%;
+    height: 100px;
     position: absolute;
   }
 
-  .logo p {
+
+  .mobilelogo a {
+    width: 60%;
+    height: 70%;
     position: absolute;
-    top: 0;
-    left: 100px;
-    font-size: 1.35em;
-    color: #000000;
+  }
+
+  .mobilelogo img {
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    left: 3%;
+    top: 3%;
+  }
+  
+  .mobilelogo p {
+    position: absolute;
+    left: 10%;
   }
 
   .main-banner {
@@ -976,7 +991,7 @@ button {
   .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -996,11 +1011,10 @@ button {
     transform: translate(0, -11px) rotate(45deg);
   }
 
-
   /* by adjusting the height of the top navigation bar to cover 100% of height* it becomes a side navigation */
   .topnav {
     height: 100%;
-    width: 0;
+    width: 0px;
     position: fixed;
     z-index: 6;
     top: 0;
@@ -1014,7 +1028,6 @@ button {
     color: #ffffff;
     text-decoration: none;
     display: block;
-
     padding: 26px;
     font-size: 18px;
     font-family: "Poppins", sans-serif;
@@ -1156,24 +1169,30 @@ button {
   }
 
   .logo {
-    height: 10%;
-    width: 70%;
+    height: 8%;
+    width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo a{ 
     top: 0;
     left: 0;
   }
 
   .logo img {
+    width: 15%;
     top: 0%;
-    left: 0;
+    left: 5%;
     position: absolute;
   }
-
+  
   .logo p {
     position: absolute;
     top: 0px;
-    left: 90px;
-    font-size: 1.35em;
+    left: 100px;
+    font-size: 1.25em;
     color: #fff;
   }
 
@@ -1197,7 +1216,7 @@ button {
 
   .vfxinfo {
     max-width: 60%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     position: absolute;
     top: 30%;
     left: 3%;
@@ -1208,7 +1227,7 @@ button {
   .guidebutton1 {
     top: 40%;
     right: 5%;
-    width: 100px;
+    width: 140px;
     height: auto;
     float: left;
     transition: 0.5s linear;
@@ -1223,7 +1242,7 @@ button {
     font-weight: 600;
     z-index: 5;
     opacity: 0;
-    color: #000;
+    color: #ffffff;
   }
 
   .guidebutton1:before {
@@ -1257,27 +1276,25 @@ button {
   }
 
   .guidebutton1:hover:before {
-    border-color: #000000;
+    border-color: #ffffff;
     height: 100%;
     transform: translateX(0);
     transition: 0.3s transform linear, 0.3s height linear 0.3s;
   }
 
   .guidebutton1:hover:after {
-    border-color: #000000;
+    border-color: #ffffff;
     height: 100%;
     transform: translateX(0);
     transition: 0.3s transform linear, 0.3s height linear 0.5s;
   }
 
-
-
   .card {
     right: 200%;
-    bottom: 30%;
+    bottom: 27%;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background: #131313;
     overflow: hidden;
@@ -1305,7 +1322,7 @@ button {
     padding: 20px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
-    transform: translateY(150px);
+    transform: translateY(100px);
     transition: transform 0.25s;
   }
 
@@ -1339,7 +1356,7 @@ button {
   }
 
   .card:hover .card_content {
-    transform: translateY(70px);
+    transform: translateY(40px);
   }
 
   .card:hover .card_description {
@@ -1349,10 +1366,10 @@ button {
 
   .card2 {
     left: 200%;
-    bottom: 5%;
+    bottom: 7%;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background: #131313;
     overflow: hidden;
@@ -1380,7 +1397,7 @@ button {
     padding: 20px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
-    transform: translateY(150px);
+    transform: translateY(100px);
     transition: transform 0.25s;
   }
 
@@ -1414,7 +1431,7 @@ button {
   }
 
   .card2:hover .card_content2 {
-    transform: translateY(70px);
+    transform: translateY(40px);
   }
 
   .card2:hover .card_description2 {
@@ -1442,7 +1459,7 @@ button {
   .gamesinfo {
     max-width: 60%;
     z-index: 5;
-    color: #000000;
+    color: #ffffff;
     position: absolute;
     overflow: hidden;
     top: 30%;
@@ -1455,6 +1472,7 @@ button {
     top: 40%;
     left: 70%;
     width: 140px;
+    color: #fff;
     height: auto;
     float: left;
     transition: 0.5s linear;
@@ -1498,18 +1516,18 @@ button {
   }
 
   .guidebutton2:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
   }
 
   .guidebutton2:hover:before {
-    border-color: #000000;
+    border-color: #ffffff;
     height: 100%;
     transform: translateX(0);
     transition: 0.3s transform linear, 0.3s height linear 0.3s;
   }
 
   .guidebutton2:hover:after {
-    border-color: #000000;
+    border-color: #ffffff;
     height: 100%;
     transform: translateX(0);
     transition: 0.3s transform linear, 0.3s height linear 0.5s;
@@ -1519,8 +1537,8 @@ button {
     left: 10%;
     top: -100%;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background: #131313;
     overflow: hidden;
@@ -1547,7 +1565,7 @@ button {
     padding: 20px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
-    transform: translateY(150px);
+    transform: translateY(100px);
     transition: transform 0.25s;
   }
 
@@ -1575,7 +1593,7 @@ button {
   }
 
   .card3:hover .card_content3 {
-    transform: translateY(70px);
+    transform: translateY(40px);
   }
 
   .card3:hover .card_description3 {
@@ -1587,8 +1605,8 @@ button {
     right: 10%;
     bottom: -100%;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background: #131313;
     overflow: hidden;
@@ -1615,7 +1633,7 @@ button {
     padding: 20px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
-    transform: translateY(150px);
+    transform: translateY(100px);
     transition: transform 0.25s;
   }
 
@@ -1643,7 +1661,7 @@ button {
   }
 
   .card4:hover .card_content4 {
-    transform: translateY(70px);
+    transform: translateY(40px);
   }
 
   .card4:hover .card_description4 {
