@@ -84,6 +84,64 @@ gsap.registerPlugin("scrollTrigger");
 
 // first video container and contents
 
+var tl1 = gsap.timeline({ duration: 10 });
+
+tl1.to(
+  ".blob1",
+  {
+    top: "-8%",
+  },
+  { ease: "elastic.out" }
+);
+
+tl1.to(".blob1", {
+  top: "-10%",
+});
+
+tl1.to(
+  ".blob2",
+  {
+    right: "-8%",
+  },
+  { ease: "elastic.out" }
+);
+
+tl1.to(".blob2", {
+  right: "-10%",
+});
+
+tl1.to(".blob2", {
+  right: "-10%",
+});
+
+tl1.to(
+  ".blob3",
+  {
+    left: "-8%",
+  },
+  { ease: "elastic.out" }
+);
+tl1.to(".blob3", {
+  left: "-10%",
+});
+
+tl1.to(".blob4", {
+  left: "32%",
+});
+
+tl1.to(
+  ".blob4",
+  {
+    left: "28%",
+  },
+  { ease: "powerin" }
+);
+
+tl1.to(".blob4", {
+  left: "30%",
+});
+
+tl1.repeat(-1);
 
 gsap.to("#vid1", {
   scrollTrigger: {

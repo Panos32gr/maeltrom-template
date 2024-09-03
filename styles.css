@@ -3,11 +3,104 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
+  background: rgb(40, 40, 43);
 }
 
 .mobilelogo {
-  opacity: 0;
+  left: -100%;
+  position: absolute;
+}
+
+.blob1 {
+  top: -10%;
+  left: -10%;
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 40px 20px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transform: rotate(50deg);
+  }
+
+
+
+
+  .blob2 {
+    top: -10%;
+    right: -10%;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px 36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 40px 20px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: rotate(50deg);
+}
+
+.blob3 {
+  top: -10%;
+  left: -10%;
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 40px 20px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transform: rotate(50deg);
+}
+
+
+.blob4 {
+  bottom: -60%;
+  left: 30%;
+  position: absolute;
+  width: 50%;
+  height: 150%;
+  border-radius: 50%;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 40px 20px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
 }
 
 /*top navigation*/
@@ -76,7 +169,11 @@ body {
 }
 
 .dropdown1:hover .dropbtn1 {
-  background-color: #00224d;
+  background: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%);
 }
 
 .dropdown2 {
@@ -128,7 +225,11 @@ body {
 }
 
 .dropdown2:hover .dropbtn2 {
-  background-color: #00224d;
+  background: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%);
 }
 
 .dropdown2:hover::after .arrow2 {
@@ -197,8 +298,7 @@ input:hover {
   left: 0;
 }
 
-  
-.logo a{ 
+.logo a {
   top: 0;
   left: 0;
 }
@@ -904,8 +1004,6 @@ input:hover {
     background: linear-gradient(90deg, #ff204e, #a0153e, #5d0e41, #00224d);
   }
 
-
-
   .mobilelogo {
     top: 0;
     left: 0;
@@ -913,7 +1011,6 @@ input:hover {
     height: 100px;
     position: absolute;
   }
-
 
   .mobilelogo a {
     width: 60%;
@@ -928,7 +1025,7 @@ input:hover {
     left: 3%;
     top: 3%;
   }
-  
+
   .mobilelogo p {
     position: absolute;
     left: 10%;
@@ -1175,8 +1272,8 @@ input:hover {
     top: 0;
     left: 0;
   }
-  
-  .logo a{ 
+
+  .logo a {
     top: 0;
     left: 0;
   }
@@ -1187,7 +1284,7 @@ input:hover {
     left: 5%;
     position: absolute;
   }
-  
+
   .logo p {
     position: absolute;
     top: 0px;
