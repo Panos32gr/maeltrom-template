@@ -24,6 +24,17 @@ var bannerStart = setInterval(function () {
   bannerLoop();
 }, bannerTimer);
 
+document.getElementById("main-banner").onmouseenter = function() {
+  clearInterval(bannerStart)
+}
+
+document.getElementById("main-banner").onmouseleave = function() {
+  bannerStart = setInterval(function () {
+    bannerLoop();
+  }, bannerTimer);
+}
+ 
+
 function bannerLoop() {
   if (bannerStatus === 1) {
     document.getElementById("imgban2").style.opacity = "0";
@@ -47,11 +58,11 @@ function bannerLoop() {
 
     setTimeout(function () {
       document.getElementById("imgban2").style.right = "0%";
-      document.getElementById("imgban2").style.zIndex = "1000";
+      document.getElementById("imgban2").style.zIndex = "0";
       document.getElementById("imgban3").style.right = "-1200px";
-      document.getElementById("imgban3").style.zIndex = "1500";
+      document.getElementById("imgban3").style.zIndex = "1";
       document.getElementById("imgban1").style.right = "1200px";
-      document.getElementById("imgban1").style.zIndex = "500";
+      document.getElementById("imgban1").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -64,11 +75,11 @@ function bannerLoop() {
 
     setTimeout(function () {
       document.getElementById("imgban3").style.right = "0%";
-      document.getElementById("imgban3").style.zIndex = "1000";
+      document.getElementById("imgban3").style.zIndex = "0";
       document.getElementById("imgban1").style.right = "-100%";
-      document.getElementById("imgban1").style.zIndex = "1500";
+      document.getElementById("imgban1").style.zIndex = "1";
       document.getElementById("imgban2").style.right = "200%";
-      document.getElementById("imgban2").style.zIndex = "500";
+      document.getElementById("imgban2").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -79,12 +90,33 @@ function bannerLoop() {
   }
 }
 
+document.getElementById("imgbtn-next").onclick = function() {
+  bannerLoop();
+}
+
+document.getElementById("imgbtn-prev").onclick = function() {
+  if (bannerStatus === 1) {
+  bannerStatus = 2;
+  }
+  else if (bannerStatus === 2) {
+    bannerStatus = 3;
+  }
+  else if (bannerStatus === 3) {
+    bannerStatus = 1;
+  }
+  bannerLoop();
+}
+
+
+
+
+
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
-// first video container and contents
 
-var tl1 = gsap.timeline({ duration: 10 });
+
+var tl1 = gsap.timeline({ duration: 5 });
 
 tl1.to(
   ".blob1",
@@ -123,6 +155,7 @@ tl1.to(
 );
 tl1.to(".blob3", {
   left: "-10%",
+  
 });
 
 tl1.to(".blob4", {
@@ -142,6 +175,9 @@ tl1.to(".blob4", {
 });
 
 tl1.repeat(-1);
+
+
+// first video container and contents
 
 gsap.to("#vid1", {
   scrollTrigger: {
