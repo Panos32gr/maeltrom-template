@@ -24,28 +24,27 @@ var bannerStart = setInterval(function () {
   bannerLoop();
 }, bannerTimer);
 
-document.getElementById("main-banner").onmouseenter = function() {
-  clearInterval(bannerStart)
-}
+document.getElementById("main-banner").onmouseenter = function () {
+  clearInterval(bannerStart);
+};
 
-document.getElementById("main-banner").onmouseleave = function() {
+document.getElementById("main-banner").onmouseleave = function () {
   bannerStart = setInterval(function () {
     bannerLoop();
   }, bannerTimer);
-}
- 
+};
 
 function bannerLoop() {
   if (bannerStatus === 1) {
     document.getElementById("imgban2").style.opacity = "0";
 
     setTimeout(function () {
-      document.getElementById("imgban1").style.right = "0px";
-      document.getElementById("imgban1").style.zIndex = "0";
-      document.getElementById("imgban2").style.right = "-1200px";
-      document.getElementById("imgban2").style.zIndex = "1";
-      document.getElementById("imgban3").style.right = "1200px";
-      document.getElementById("imgban3").style.zIndex = "2";
+      document.getElementById("imgban3").style.right = "0px";
+      document.getElementById("imgban3").style.zIndex = "0";
+      document.getElementById("imgban1").style.right = "-1200px";
+      document.getElementById("imgban1").style.zIndex = "1";
+      document.getElementById("imgban2").style.right = "1200px";
+      document.getElementById("imgban2").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -57,12 +56,12 @@ function bannerLoop() {
     document.getElementById("imgban3").style.opacity = "0";
 
     setTimeout(function () {
-      document.getElementById("imgban2").style.right = "0%";
-      document.getElementById("imgban2").style.zIndex = "0";
-      document.getElementById("imgban3").style.right = "-1200px";
-      document.getElementById("imgban3").style.zIndex = "1";
-      document.getElementById("imgban1").style.right = "1200px";
-      document.getElementById("imgban1").style.zIndex = "2";
+      document.getElementById("imgban1").style.right = "0%";
+      document.getElementById("imgban1").style.zIndex = "0";
+      document.getElementById("imgban2").style.right = "-1200px";
+      document.getElementById("imgban2").style.zIndex = "1";
+      document.getElementById("imgban3").style.right = "1200px";
+      document.getElementById("imgban3").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -74,12 +73,12 @@ function bannerLoop() {
     document.getElementById("imgban1").style.opacity = "0";
 
     setTimeout(function () {
-      document.getElementById("imgban3").style.right = "0%";
-      document.getElementById("imgban3").style.zIndex = "0";
-      document.getElementById("imgban1").style.right = "-100%";
-      document.getElementById("imgban1").style.zIndex = "1";
-      document.getElementById("imgban2").style.right = "200%";
-      document.getElementById("imgban2").style.zIndex = "2";
+      document.getElementById("imgban2").style.right = "0%";
+      document.getElementById("imgban2").style.zIndex = "0";
+      document.getElementById("imgban3").style.right = "-1200px";
+      document.getElementById("imgban3").style.zIndex = "1";
+      document.getElementById("imgban1").style.right = "1200px";
+      document.getElementById("imgban1").style.zIndex = "2";
     }, 500);
 
     setTimeout(function () {
@@ -90,31 +89,66 @@ function bannerLoop() {
   }
 }
 
-document.getElementById("imgbtn-next").onclick = function() {
-  bannerLoop();
-}
-
-document.getElementById("imgbtn-prev").onclick = function() {
+function reverseBanner() {
   if (bannerStatus === 1) {
-  bannerStatus = 2;
-  }
-  else if (bannerStatus === 2) {
+    document.getElementById("imgban3").style.opacity = "0";
+    setTimeout(function () {
+      document.getElementById("imgban3").style.left = "1200px";
+      document.getElementById("imgban3").style.zIndex = "2";
+      document.getElementById("imgban1").style.left = "0px";
+      document.getElementById("imgban1").style.zIndex = "0";
+      document.getElementById("imgban2").style.left = "-1200px";
+      document.getElementById("imgban2").style.zIndex = "1";
+    }, 500);
+    setTimeout(function () {
+      document.getElementById("imgban3").style.opacity = "1";
+    }, 1000);
+
+    bannerStatus = 2;
+  } else if (bannerStatus === 2) {
+    document.getElementById("imgban2").style.opacity = "0";
+    setTimeout(function () {
+      document.getElementById("imgban2").style.left = "1200px";
+      document.getElementById("imgban2").style.zIndex = "2";
+      document.getElementById("imgban3").style.left = "0px";
+      document.getElementById("imgban3").style.zIndex = "0";
+      document.getElementById("imgban1").style.left = "-1200px";
+      document.getElementById("imgban1").style.zIndex = "1";
+    }, 500);
+    setTimeout(function () {
+      document.getElementById("imgban2").style.opacity = "1";
+    }, 1000);
+
     bannerStatus = 3;
-  }
-  else if (bannerStatus === 3) {
+  } else if (bannerStatus === 3) {
+    document.getElementById("imgban1").style.opacity = "0";
+    setTimeout(function() {
+      document.getElementById("imgban1").style.left = "1200px";
+      document.getElementById("imgban1").style.zIndex = "2";
+      document.getElementById("imgban2").style.left = "0px";
+      document.getElementById("imgban2").style.zIndex = "0";
+      document.getElementById("imgban3").style.left = "-1200px";
+      document.getElementById("imgban3").style.zIndex = "1";
+
+    }, 500);
+    setTimeout(function() {
+      document.getElementById("imgban1").style.opacity = "1";
+    }, 1000);
+
     bannerStatus = 1;
   }
-  bannerLoop();
 }
 
+document.getElementById("imgbtn-next").onclick = function () {
+  bannerLoop();
+};
 
-
-
+document.getElementById("imgbtn-prev").onclick = function () {
+    reverseBanner();
+};
 
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
-
-
 
 var tl1 = gsap.timeline({ duration: 5 });
 
@@ -155,7 +189,6 @@ tl1.to(
 );
 tl1.to(".blob3", {
   left: "-10%",
-  
 });
 
 tl1.to(".blob4", {
@@ -175,7 +208,6 @@ tl1.to(".blob4", {
 });
 
 tl1.repeat(-1);
-
 
 // first video container and contents
 
