@@ -90,52 +90,51 @@ function bannerLoop() {
 }
 
 function reverseBanner() {
-  if (bannerStatus === 1) {
+  if (bannerStatus === 2) {
     document.getElementById("imgban1").style.opacity = "0";
     setTimeout(function () {
-      document.getElementById("imgban1").style.right = "1200px";
-      document.getElementById("imgban1").style.zIndex = "1";
+      document.getElementById("imgban1").style.right = "-1200px";
+      document.getElementById("imgban1").style.zIndex = "-1";
       document.getElementById("imgban3").style.right = "0px";
       document.getElementById("imgban3").style.zIndex = "0";
-      document.getElementById("imgban2").style.right = "-1200px";
-      document.getElementById("imgban2").style.zIndex = "2";
+      document.getElementById("imgban2").style.right = "1200px";
+      document.getElementById("imgban2").style.zIndex = "-2";
     }, 500);
     setTimeout(function () {
       document.getElementById("imgban1").style.opacity = "1";
     }, 1000);
 
-    bannerStatus = 2; 
-  } else if (bannerStatus === 2) {
+    bannerStatus = 3;
+  } else if (bannerStatus === 3) {
     document.getElementById("imgban2").style.opacity = "0";
     setTimeout(function () {
-      document.getElementById("imgban2").style.right = "1200px";
-      document.getElementById("imgban2").style.zIndex = "1";
+      document.getElementById("imgban2").style.right = "-1200px";
+      document.getElementById("imgban2").style.zIndex = "-1";
       document.getElementById("imgban1").style.right = "0px";
       document.getElementById("imgban1").style.zIndex = "0";
-      document.getElementById("imgban3").style.right = "-1200px";
-      document.getElementById("imgban3").style.zIndex = "2";
+      document.getElementById("imgban3").style.right = "1200px";
+      document.getElementById("imgban3").style.zIndex = "-2";
     }, 500);
     setTimeout(function () {
       document.getElementById("imgban2").style.opacity = "1";
     }, 1000);
 
-    bannerStatus = 3; 
-  } else if (bannerStatus === 3) {
+    bannerStatus = 1;
+  } else if (bannerStatus === 1) {
     document.getElementById("imgban3").style.opacity = "0";
-    setTimeout(function() {
-      document.getElementById("imgban3").style.right = "1200px";
-      document.getElementById("imgban3").style.zIndex = "1";
+    setTimeout(function () {
+      document.getElementById("imgban3").style.right = "-1200px";
+      document.getElementById("imgban3").style.zIndex = "-1";
       document.getElementById("imgban2").style.right = "0px";
       document.getElementById("imgban2").style.zIndex = "0";
-      document.getElementById("imgban1").style.right = "-1200px";
-      document.getElementById("imgban1").style.zIndex = "2";
-
+      document.getElementById("imgban1").style.right = "1200px";
+      document.getElementById("imgban1").style.zIndex = "-2";
     }, 500);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban3").style.opacity = "1";
     }, 1000);
 
-    bannerStatus = 1; 
+    bannerStatus = 2;
   }
 }
 
@@ -147,62 +146,39 @@ document.getElementById("imgbtn-prev").onclick = function () {
   reverseBanner();
 };
 
-
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
 
-var tl1 = gsap.timeline({ duration: 5 });
+var tl1 = gsap.timeline({ duration: 0.5 });
 
-tl1.to(
-  ".blob1",
-  {
-    top: "-8%",
-  },
-  { ease: "elastic.out" }
-);
+tl1.to(".blob1", {
+  top: "-8%",
+});
 
 tl1.to(".blob1", {
   top: "-10%",
 });
 
-tl1.to(
-  ".blob2",
-  {
-    right: "-8%",
-  },
-  { ease: "elastic.out" }
-);
-
 tl1.to(".blob2", {
-  right: "-10%",
+  right: "-8%",
 });
 
 tl1.to(".blob2", {
   right: "-10%",
 });
 
-tl1.to(
-  ".blob3",
-  {
-    left: "-8%",
-  },
-  { ease: "elastic.out" }
-);
+tl1.to(".blob3", {
+  left: "-8%",
+});
+
 tl1.to(".blob3", {
   left: "-10%",
 });
 
-tl1.to(".blob4", {
-  left: "32%",
-});
 
-tl1.to(
-  ".blob4",
-  {
-    left: "28%",
-  },
-  { ease: "powerin" }
-);
+tl1.to(".blob4", {
+  left: "28%",
+});
 
 tl1.to(".blob4", {
   left: "30%",

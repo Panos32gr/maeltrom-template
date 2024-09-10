@@ -312,7 +312,6 @@ input:hover {
   top: 200px;
   left: 0;
   right: 0;
-  position: relative;
   z-index: 6;
 }
 
