@@ -329,8 +329,8 @@ gsap.from(".wrapper", {
 
 gsap.to(".footerlinks", {
   scrollTrigger: {
-    trigger: ".footercontainer",
-    start: "top 0%",
+    trigger: ".footercontainer1",
+    start: "bottom center",
     toggleActions: "play none none none",
   },
   duration: 2,
