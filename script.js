@@ -92,47 +92,41 @@ function bannerLoop() {
 function reverseBanner() {
   if (bannerStatus === 1) {
     document.getElementById("imgban1").style.opacity = "0";
-    setTimeout(function () {
-      document.getElementById("imgban1").style.right = "-1200px";
-      document.getElementById("imgban1").style.zIndex = "-1";
-      document.getElementById("imgban3").style.right = "0px";
-      document.getElementById("imgban3").style.zIndex = "0";
-      document.getElementById("imgban2").style.right = "1200px";
-      document.getElementById("imgban2").style.zIndex = "-2";
-    }, 500);
-    setTimeout(function () {
-      document.getElementById("imgban3").style.opacity = "1";
-    }, 1000);
+
+    document.getElementById("imgban1").style.right = "-1200px";
+    document.getElementById("imgban1").style.zIndex = "-1";
+    document.getElementById("imgban3").style.right = "0px";
+    document.getElementById("imgban3").style.zIndex = "0";
+    document.getElementById("imgban2").style.right = "1200px";
+    document.getElementById("imgban2").style.zIndex = "-2";
+
+    document.getElementById("imgban3").style.opacity = "1";
 
     bannerStatus = 3;
   } else if (bannerStatus === 2) {
     document.getElementById("imgban2").style.opacity = "0";
-    setTimeout(function () {
-      document.getElementById("imgban2").style.right = "-1200px";
-      document.getElementById("imgban2").style.zIndex = "-1";
-      document.getElementById("imgban1").style.right = "0px";
-      document.getElementById("imgban1").style.zIndex = "0";
-      document.getElementById("imgban3").style.right = "1200px";
-      document.getElementById("imgban3").style.zIndex = "-2";
-    }, 500);
-    setTimeout(function () {
-      document.getElementById("imgban1").style.opacity = "1";
-    }, 1000);
+
+    document.getElementById("imgban2").style.right = "-1200px";
+    document.getElementById("imgban2").style.zIndex = "-1";
+    document.getElementById("imgban1").style.right = "0px";
+    document.getElementById("imgban1").style.zIndex = "0";
+    document.getElementById("imgban3").style.right = "1200px";
+    document.getElementById("imgban3").style.zIndex = "-2";
+
+    document.getElementById("imgban1").style.opacity = "1";
 
     bannerStatus = 1;
   } else if (bannerStatus === 3) {
     document.getElementById("imgban3").style.opacity = "0";
-    setTimeout(function () {
-      document.getElementById("imgban3").style.right = "-1200px";
-      document.getElementById("imgban3").style.zIndex = "-1";
-      document.getElementById("imgban2").style.right = "0px";
-      document.getElementById("imgban2").style.zIndex = "0";
-      document.getElementById("imgban1").style.right = "1200px";
-      document.getElementById("imgban1").style.zIndex = "-2";
-    }, 500);
-    setTimeout(function () {
-      document.getElementById("imgban2").style.opacity = "1";
-    }, 1000);
+
+    document.getElementById("imgban3").style.right = "-1200px";
+    document.getElementById("imgban3").style.zIndex = "-1";
+    document.getElementById("imgban2").style.right = "0px";
+    document.getElementById("imgban2").style.zIndex = "0";
+    document.getElementById("imgban1").style.right = "1200px";
+    document.getElementById("imgban1").style.zIndex = "-2";
+
+    document.getElementById("imgban2").style.opacity = "1";
 
     bannerStatus = 2;
   }
@@ -151,42 +145,19 @@ gsap.registerPlugin("scrollTrigger");
 
 var tl1 = gsap.timeline({ duration: 0.5 });
 
-tl1.to(".blob1", {
-  top: "-8%",
-});
 
-tl1.to(".blob1", {
-  top: "-10%",
-});
-
-tl1.to(".blob2", {
-  right: "-8%",
-});
-
-tl1.to(".blob2", {
-  right: "-10%",
-});
-
-tl1.to(".blob3", {
-  left: "-8%",
-});
-
-tl1.to(".blob3", {
-  left: "-10%",
-});
-
-
-tl1.to(".blob4", {
-  left: "28%",
-});
-
-tl1.to(".blob4", {
-  left: "30%",
-});
-
-tl1.repeat(-1);
 
 // first video container and contents
+
+gsap.to(".content1", {
+  scrollTrigger: {
+    trigger: ".videocontainer1",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 1,
+  width: "1500px",
+});
 
 gsap.to("#vid1", {
   scrollTrigger: {
@@ -196,29 +167,30 @@ gsap.to("#vid1", {
   },
   duration: 2,
   opacity: 1,
+  delay: 2,
 });
 
 gsap.to(".vfxinfo", {
   scrollTrigger: {
-    trigger: ".vfxinfo",
-    start: "top 50%",
+    trigger: ".videocontainer1",
+    start: "top center",
     toggleActions: "play none none none",
   },
   duration: 1.5,
   opacity: 1,
   ease: "power1.in",
-  delay: 1,
+  delay: 2,
 });
 
 gsap.to(".guidebutton1", {
   scrollTrigger: {
     trigger: ".videocontainer1",
-    start: "top 50%",
+    start: "top center",
     toggleActions: "play none none none",
   },
   duration: 1.5,
   opacity: 1,
-  delay: 1,
+  delay: 2,
 });
 
 gsap.to(".card", {
@@ -246,6 +218,16 @@ gsap.to(".card2", {
 });
 
 //second video container and contents animations
+gsap.to(".content2", {
+  scrollTrigger: {
+    trigger: ".videocontainer2",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 1,
+  width: "1500px",
+});
+
 gsap.to("#vid2", {
   scrollTrigger: {
     trigger: ".videocontainer2",
@@ -254,13 +236,13 @@ gsap.to("#vid2", {
   },
   duration: 2,
   opacity: 1,
+  delay: 2,
 });
 
 gsap.to(".gamesinfo", {
   scrollTrigger: {
-    trigger: ".gamesinfo",
-    start: "top 50%",
-
+    trigger: ".videocontainer2",
+    start: "top center",
     toggleActions: "play none none none",
   },
   duration: 1.5,
@@ -277,7 +259,7 @@ gsap.to(".guidebutton2", {
   },
   duration: 1.5,
   opacity: 1,
-  delay: 1,
+  delay: 2,
 });
 
 if (window.innerWidth < 800) {
@@ -325,18 +307,18 @@ if (window.innerWidth < 800) {
 gsap.to(".footer", {
   scrollTrigger: {
     trigger: ".footercontainer",
-    start: "top 90%",
+    start: "center bottom",
     toggleActions: "play none none none",
   },
-  duration: 1,
-  top: "0",
-  ease: "power1.in",
+  duration: 2,
+  bottom: "20%",
+  height: "500px",
 });
 
 gsap.from(".wrapper", {
   scrollTrigger: {
     trigger: ".footercontainer",
-    start: "top 80%",
+    start: "center bottom",
     toggleActions: "play none none none",
   },
   duration: 2,
@@ -348,7 +330,7 @@ gsap.from(".wrapper", {
 gsap.to(".footerlinks", {
   scrollTrigger: {
     trigger: ".footercontainer",
-    start: "top 80%",
+    start: "top 0%",
     toggleActions: "play none none none",
   },
   duration: 2,
