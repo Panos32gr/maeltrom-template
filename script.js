@@ -156,7 +156,7 @@ gsap.to(".content1", {
     toggleActions: "play none none none",
   },
   duration: 1,
-  width: "1500px",
+  width: "1000px",
 });
 
 gsap.to("#vid1", {
@@ -167,20 +167,46 @@ gsap.to("#vid1", {
   },
   duration: 2,
   opacity: 1,
-  delay: 2,
+  delay: 1,
 });
 
-gsap.to(".vfxinfo", {
+
+gsap.to(".desc", {
   scrollTrigger: {
-    trigger: ".videocontainer1",
+    trigger: ".section1",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  height: "600",
+
+});
+
+
+gsap.to(".desc p", {
+  scrollTrigger: {
+    trigger: ".vfxinfo",
     start: "top center",
     toggleActions: "play none none none",
   },
   duration: 1.5,
   opacity: 1,
-  ease: "power1.in",
   delay: 2,
 });
+
+
+gsap.to(".plc1", {
+  scrollTrigger: {
+    trigger: ".btnholder",
+    start: "top bottom",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  width: "300px",
+  delay: 0.5
+});
+
+
 
 gsap.to(".guidebutton1", {
   scrollTrigger: {
@@ -193,29 +219,7 @@ gsap.to(".guidebutton1", {
   delay: 2,
 });
 
-gsap.to(".card", {
-  scrollTrigger: {
-    trigger: ".videocontainer1",
-    start: "center center",
-    toggleActions: "play none none none",
-  },
-  duration: 1.5,
-  opacity: 1,
-  right: "10%",
-  delay: 0.5,
-});
 
-gsap.to(".card2", {
-  scrollTrigger: {
-    trigger: ".videocontainer1",
-    start: "center center",
-    toggleActions: "play none none none",
-  },
-  duration: 1.5,
-  opacity: 1,
-  left: "10%",
-  delay: 0.5,
-});
 
 //second video container and contents animations
 gsap.to(".content2", {
@@ -225,7 +229,7 @@ gsap.to(".content2", {
     toggleActions: "play none none none",
   },
   duration: 1,
-  width: "1500px",
+  width: "1000px",
 });
 
 gsap.to("#vid2", {
@@ -262,44 +266,43 @@ gsap.to(".guidebutton2", {
   delay: 2,
 });
 
+gsap.to(".desc2", {
+  scrollTrigger: {
+    trigger: ".section1",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 2,
+  height: "600",
+
+});
+
+
+gsap.to(".desc2 p", {
+  scrollTrigger: {
+    trigger: ".gamesinfo",
+    start: "top center",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  opacity: 1,
+  delay: 2,
+});
+
+
+gsap.to(".plc2", {
+  scrollTrigger: {
+    trigger: ".btnholder2",
+    start: "top bottom",
+    toggleActions: "play none none none",
+  },
+  duration: 1.5,
+  width: "300px",
+  delay: 0.5
+});
+
 if (window.innerWidth < 800) {
-  gsap.to(".card3", {
-    scrollTrigger: {
-      trigger: ".videocontainer2",
-      start: "center center",
-      toggleActions: "play none none none",
-    },
-    duration: 1.5,
-    top: "55%",
-  }),
-    gsap.to(".card4", {
-      scrollTrigger: {
-        trigger: ".videocontainer2",
-        start: "center center",
-        toggleActions: "play none none none",
-      },
-      duration: 1.5,
-      bottom: "10%",
-    });
-} else {
-  gsap.to(".card3", {
-    scrollTrigger: {
-      trigger: ".videocontainer2",
-      start: "center center",
-      toggleActions: "play none none none",
-    },
-    duration: 1.5,
-    top: "65%",
-  }),
-    gsap.to(".card4", {
-      scrollTrigger: {
-        trigger: ".videocontainer2",
-        start: "center center",
-        toggleActions: "play none none none",
-      },
-      duration: 1.5,
-      bottom: "12%",
-    });
+
 }
 
 //footer container and contents animation
