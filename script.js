@@ -268,7 +268,7 @@ gsap.to(".guidebutton2", {
 
 gsap.to(".desc2", {
   scrollTrigger: {
-    trigger: ".section1",
+    trigger: ".section2",
     start: "top center",
     toggleActions: "play none none none",
   },
