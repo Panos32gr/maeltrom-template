@@ -185,7 +185,7 @@ gsap.to(".desc", {
 
 gsap.to(".desc p", {
   scrollTrigger: {
-    trigger: ".content2",
+    trigger: ".vfxinfo",
     start: "top center",
     toggleActions: "play none none none",
   },
@@ -280,7 +280,7 @@ gsap.to(".desc2", {
 
 gsap.to(".desc2 p", {
   scrollTrigger: {
-    trigger: ".gamesinfo",
+    trigger: ".section2",
     start: "top center",
     toggleActions: "play none none none",
   },
