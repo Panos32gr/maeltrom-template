@@ -185,7 +185,7 @@ gsap.to(".desc", {
 
 gsap.to(".desc p", {
   scrollTrigger: {
-    trigger: ".vfxinfo",
+    trigger: ".content2",
     start: "top center",
     toggleActions: "play none none none",
   },
