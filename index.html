@@ -42,13 +42,13 @@
   <div class="content" id="content">
     <video id="vid1" src="images/9669050-hd_1920_1080_25fps.mp4" autoplay loop muted></video>
     <video id="vid2" src="images/7914778-sd_426_240_30fps.mp4" autoplay loop muted></video>
-    <div class="asset"></div>
   </div>
+  <div class="asset"></div>
 </div>
 
 
   <div class="textcontainer">
-    <div class="vfxtext">
+    <div class="vfxtext" id="vfxtext">
       <h3>VFX project information here.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
         interdum vel sapien vel eleifend. Praesent laoreet ultrices mi, ut
@@ -60,7 +60,7 @@
       <a href="VFX.html"><button class="vfxbutton">Learn More. </button></a>
     </div>
 
-    <div class="gmdtext">
+    <div class="gmdtext" id="gmdtext">
       <h3>Game development information here</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
         interdum vel sapien vel eleifend. Praesent laoreet ultrices mi, ut
@@ -135,6 +135,17 @@
     <div class="bar2"></div>
     <div class="bar3"></div>
   </div>
+
+  <div class="arrowleft" id="arrowleft" onclick="vidswitch()">
+    <img src="images/arrowleft.png" alt="">
+  </div>
+
+  <div class="arrowright" >
+    <button id="arrowright" onclick="vidswitch()" >
+      <img src="images/arrowright.png" alt="">
+    </button>
+  </div>
+
 
   <script src="script.js"></script>
 </body>

@@ -11,41 +11,13 @@ function toggleMenu() {
   }
 }
 
-
-
 //element animations using gsap cdns
 gsap.registerPlugin("scrollTrigger");
-
-
-
-
-gsap.to(".videosection", {
-  scrollTrigger: {
-    trigger: ".videosection",
-    start: "center center",
-    end: "+=1000",
-    pin: true,
-    toggleActions: "play none none none",
-  },
-});
-
-
-gsap.to(".content", {
-  scrollTrigger: {
-    trigger: ".content",
-    start: "center center",
-    toggleActions: "play none none none",
-  },
-  duration: 1,
-  width: "1100px"
-});
-
 
 gsap.to("#vid1", {
   scrollTrigger: {
     onEnterBack: function () {
-      gsap.to("#vid2", {opacity: 0}),
-      gsap.to("#vid1", {opacity: 1})
+      gsap.to("#vid2", { opacity: 0 }), gsap.to("#vid1", { opacity: 1 });
     },
     trigger: ".vfxtext",
     start: "top center",
@@ -67,10 +39,6 @@ gsap.to("#vid1", {
 
 gsap.to("#vid2", {
   scrollTrigger: {
-    onEnter: function () {
-      gsap.to("#vid1", {opacity: 0}),
-      gsap.to("#vid2", {opacity: 1})
-    },
     trigger: ".gmdtext",
     start: "top center",
     toggleActions: "play none none none",
@@ -79,12 +47,9 @@ gsap.to("#vid2", {
   opacity: 1,
 });
 
-
-
-
 gsap.to(".vfxbutton", {
   scrollTrigger: {
-    trigger: ".videocontainer1",
+    trigger: ".videosection",
     start: "top center",
     toggleActions: "play none none none",
   },
@@ -93,15 +58,81 @@ gsap.to(".vfxbutton", {
   delay: 2,
 });
 
+if (window.innerWidth <= 800) {
+  gsap.to(".content", {
+    scrollTrigger: {
+      trigger: ".content",
+      start: "center center",
+      toggleActions: "play none none none",
+    },
+    duration: 1,
+    height: "600px",
+  })
+    function vidswitch() {
+      var v1 = document.getElementById("vid1");
 
+      if (v1.style.opacity === "1") {
+        gsap.to(".vfxtext", { duration: 1, left: "-35%", opacity: 0 });
+          gsap.to("#vid1", { duration: 1, opacity: 0 });
+          gsap.to(".gmdtext", { duration: 1, left: "35%", opacity: 1});
+          gsap.to("#vid2", { duration: 1, opacity: 1 });
+      } else {
+        gsap.to(".vfxtext", { duration: 1, left: "35%", opacity: 1 });
+        gsap.to("#vid1", { duration: 1, opacity: 1 });
+        gsap.to(".gmdtext", { duration: 1, left: "-35%", opacity: 0 });
+        gsap.to("#vid2", { duration: 1, opacity: 0 });
+      }
+    };
+} else {
+  gsap.to(".videosection", {
+    scrollTrigger: {
+      trigger: ".videosection",
+      start: "center center",
+      pin: true,
+      toggleActions: "play none none none",
+    },
+  }),
+    gsap.to(".content", {
+      scrollTrigger: {
+        trigger: ".content",
+        start: "center center",
+        toggleActions: "play none none none",
+      },
+      duration: 1,
+      width: "1100px",
+    }),
+    gsap.to("#vid1", {
+      scrollTrigger: {
+        onEnterBack: function () {
+          gsap.to("#vid2", { opacity: 0 }), gsap.to("#vid1", { opacity: 1 });
+        },
+        trigger: ".vfxtext",
+        start: "top center",
+        toggleActions: "play none none none",
+      },
+      duration: 2,
+      opacity: 1,
+    });
 
+  gsap.to("#vid1", {
+    scrollTrigger: {
+      trigger: ".gmdtext",
+      start: "top center",
+      toggleActions: "play none none none",
+    },
+    duration: 2,
+    opacity: 0,
+  });
 
-
-
-
-
-if (window.innerWidth < 800) {
-
+  gsap.to("#vid2", {
+    scrollTrigger: {
+      trigger: ".gmdtext",
+      start: "top center",
+      toggleActions: "play none none none",
+    },
+    duration: 2,
+    opacity: 1,
+  });
 }
 
 //footer container and contents animation
@@ -131,12 +162,12 @@ gsap.from(".wrapper", {
 
 gsap.to(".footerlinks", {
   scrollTrigger: {
-    trigger: ".footercontainer1",
+    trigger: ".footercontainer",
     start: "bottom center",
     toggleActions: "play none none none",
   },
   duration: 2,
-  opacity: "1",
+  opacity: 1,
   delay: 2,
 });
 
@@ -147,7 +178,7 @@ gsap.to(".mail", {
     toggleActions: "play none none none",
   },
   duration: 2,
-  opacity: "1",
+  opacity: 1,
   delay: 2.5,
 });
 
@@ -158,6 +189,6 @@ gsap.to(".corp", {
     toggleActions: "play none none none",
   },
   duration: 2,
-  opacity: "1",
+  opacity: 1,
   delay: 3,
 });
